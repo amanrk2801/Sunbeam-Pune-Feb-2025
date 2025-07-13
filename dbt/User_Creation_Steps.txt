@@ -1,0 +1,19 @@
+step 1. Login with "root" user.
+cmd> mysql -u root -p
+Password: manager
+
+step 2. Create a new user.
+mysql> CREATE USER D1_12345_Yogesh@localhost IDENTIFIED BY 'manager';
+
+step 3. Create a new database/schema.
+mysql> CREATE DATABASE classwork;
+mysql> SHOW DATABASES;
+
+step 4. Give all permissions to the new user on the new database.
+mysql> GRANT ALL PRIVILEGES ON *.* TO D1_12345_Yogesh@localhost;
+mysql> FLUSH PRIVILEGES;
+
+step 5. mysql> EXIT
+step 1. Login with new user and password on MySQL CLI.
+cmd> mysql -u D1_12345_Yogesh -p
+Password:manager

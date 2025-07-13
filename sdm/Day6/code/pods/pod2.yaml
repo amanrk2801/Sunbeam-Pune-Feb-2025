@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod2
+  labels:
+    type: website
+spec:
+  containers:
+    - name: container1
+      image: httpd
+      ports:
+        - name: http-port
+          containerPort: 80
+          protocol: TCP

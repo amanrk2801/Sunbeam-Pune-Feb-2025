@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: rs
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      type: mywebsite
+  template:
+    metadata:
+      labels:
+        type: mywebsite
+    spec:
+      containers:
+        - name: container1
+          image: amitksunbeam/mywebsite
+          ports:
+            - containerPort: 80
+              protocol: TCP

@@ -1,0 +1,575 @@
+Day 4
+
+1. import "day4-data\code\online_voting" in your workspace
+(continue with existing workspace, do not change)
+
+- edit DB config from web.xml
+- Walk through the code
+ - web.xml
+ - Context Listener
+ - Servlet - DAO - POJO - DB layers
+
+2. import "day4-data\code\day4.1" , in your workspace , to revise
+ - JSP comments
+ - scriptlets
+ - expressions
+ - EL syntax
+ - declarations
+
+3. Complete 
+ "day4-data\JSP basic assignment.png"
+
+Day 5
+1. import "day5-data\code\day5.1" , in your workspace , to revise
+ - open index.jsp
+  -trace all the links
+ - JSP basic assignment solution
+  - You can add URL rewriting , to make it cookie independent
+   (Hint -use encodeURL n encodeRedirectURL)
+ - JSP Directives 
+  - page directive
+   - centralised error handling 
+    - errorPage , isErrorPage
+  - include directive
+ 
+  - JSP actions
+   - forward , include , param
+
+
+2. import "day5-data\code\day5_mvc" , in your workspace , to revise
+   - edit web.xml 
+    - to change db settings
+
+    - MVC 
+    - Front Controller pattern
+    - custom implementation
+  - what will happen upon app deployment ?
+  - what will happen upon request
+   http://host:port/ctx/
+
+3. import 
+   - hibernate maven project template 
+   - to download hibernate dependencies
+
+Day 6
+0. Mandatory Hibernate  work 
+
+Steps - 
+
+1. Copy hibernate_template_project under your workspace folder.
+
+2. From IDE
+Click on File --> import --> Maven --> Existing Maven Project --> Browse n select hibernate_template_project  --> Finish.
+
+3. Update the project .
+R click on the project --> Maven --> Update Project -->select Force update checkbox -->Finish
+
+4. Edit DB password from hibernate.cfg.xml , as per your DB settings.
+
+5. Create HibernateUtils
+
+6. Create n run TestHibernate
+ -  test if hibernate framework is up n running.
+
+7. Create POJO class 
+ - add @Entity n @Id annotations
+ - add <mapping> entry in hibernate.cfg.xml
+
+8. Run TestHibernate again
+ - test automatic table creation
+
+ 
+
+Continue with the revision - 
+
+
+1. import day6_mvc , in your workspace
+ -  edit DB settings from web.xml
+ - revise MVC n CRUD for users (user management) 
+Refer - "da6-data\day6_help\MVC Development steps.txt"
+
+2. Optional work 
+ import jdbc_demo , in your workspace
+ - revise JSTL core tags
+Refer - "day6-data\day6_help\regarding JSTL.txt"
+
+3. Optional work
+For quick revision of earlier concepts (servlets - page navigation n session tracking)
+ Refer - "da6-data\day6_help\Quick Revision of Servlets\page navigation\page navigation techniques.txt"
+Refer - "day6-data\day6_help\Quick Revision of Servlets\state management techniques\regarding session tracking.txt"
+
+4. Can optionally (but recommended !)
+ Solve - "day6-data\day6_help\Quick Revision of Servlets\student admission.png"
+ - use any navigation technique
+ - practice by writing everything from scratch.
+
+
+Day 7
+
+1. Copy n import day7.1 in your workspace 
+ - as existing Maven project
+How ?
+2. From IDE
+Click on File --> import --> Maven --> Existing Maven Project --> Browse n select day7.1  --> Finish.
+
+3. Update the project .
+R click on the project --> Maven --> Update Project -->select Force update checkbox -->Finish
+
+4. Edit DB password from hibernate.cfg.xml , as per your DB settings.
+
+5. Revise in top down manner , from 
+Tester -DAO- Entity layer - DB
+ 
+Testers to be revised -
+You have to trace it from Tester -> DAO n Entities.
+UserRegistration.java
+GetUserDetailsById.java
+DisplayAllUsers.java
+GetUserDetailsByRoleAndDob.java
+DisplayLastNamesByRole.java
+TestConstrctorExpression.java
+ChangePassword.java
+
+
+6. Mandatory assignment
+
+CRUD operations on Product (can be used later in eCommerce project)
+Typical product details -
+product id : Long (auto increment)
+name : string (unique) : varchar(20)
+product description : string : varchar(300)
+manufacture date : LocalDate
+price : double
+available quantity : int
+category : enum (STATIONARY,SHOES,GRAINS,OIL...)
+
+Dev steps 
+
+6.1 Continue with hibernate_template_project.
+6.2 Edit DB settings
+6.3 Create HibernateUtils class
+6.4 Create Product Entity from above description
+1.3 Create Product DAO , implementation class  n testers for the following
+(After writing DAO method at least once on your own , please copy the boilerplate code)
+You can copy the testers from day7.1 n make necessary changes.
+
+Solve as many as possible ( No Pressure !!!)
+ 1. Add a new product
+i/p - product details (except id)
+
+ 2. Display product details 
+     i/p - product id 
+o/p - product details OR error message
+
+ 3. Display   id , name , price  of all the products manufactured before specified date and from specific category
+i/p - date , category
+o/p - List of selected products details
+
+ 4. Change Product price
+   i/p - product name
+   o/p - message
+
+OPTIONAL
+
+ 5. Apply discount to all products , whose available quantity > specified quantity
+	i/p - quantity n discount in %
+
+Day 8
+
+1.Copy n  import day8.2 directly , in the combined lab.
+ - as existing Maven project
+ - edit DB settings (password)
+ - we are using here 
+    - adv_java2 : db 
+
+2. Revise 
+one-many n many-one association 
+ - with annotations.
+
+3. Solve 
+1. Add new restaurant
+i/p - restaurant details
+o/p - mesg
+
+2. Add new food item to the restaurant
+i/p - food item details + restaurant id
+o/p - mesg
+
+dev steps -
+1. get restaurant from its id
+ - session.get(...)
+2. null chking
+ - not null
+3. establish bi dir asso 
+Restaurant 1<--->* FoodItem
+
+4. session.persist(foodItem);
+
+
+4. Main lab activity
+- copy n import , in your workspace.
+ - "template projects\web_maven_hibernate_template"
+ - force update.
+ - refer
+  - utils n context listener
+ - remove index.jsp from web.xml
+  - since it's FrontController MVC demo
+
+- Refer to day6_mvc project
+ - It uses 
+ -JDBC based Data access
+ - replace it by Hibernate.
+
+We will discuss step by step appraoch in the lab.
+
+5. Later , you can import day8.1
+ - to revise
+ - Update n Delete
+ - image (blob) handling
+
+Day 9
+
+Extremely important day - from your project perspective!
+
+1. Copy n import day9.1 in your workspace
+ - as existing Maven project
+ - edit DB password
+
+2. For the complete revision
+ - Walk through these testers
+ AddNewRestaurant.java
+AddNewFoodItemToRestaurant.java
+AddMultipleFoodItemsToRestaurant.java
+DeleteRestuarantDetails.java
+RemoveFoodItemFromRestaurant.java
+GetRestaurantDetailsByName.java
+GetRestaurantAndMenuDetailsByRestaurantName
+
+3. Mandatory Assignment (for complete confidence !)
+ - Try n solve as many objectives as possible .
+
+3.1 Configure 
+Category 1<----->* Product
+
+Category details 
+ - id : Long
+ - creation date
+ - updation time stamp
+ - name (unique) - varchar(50)
+ - description - varchar(255)
+
+Product details 
+ - product id : Long (auto increment)
+ - creation date
+ - updation time stamp
+name : string (unique) : varchar(20)
+product description : string : varchar(300)
+manufacture date : LocalDate
+price : double
+available quantity : int
+
+3.2 Continue with your earlier Product entity.
+ - Make suitable changes.
+ - add required annotations
+ - add <mapping> entries.
+
+
+4. Solve 
+4.1  Add new Category
+ i/p - category details
+ o/p - a message
+
+4.2  Add multiple products to the existing category
+ i/p - category id , list of products
+ o/p - a message
+
+4.3 Remove specific product from specific category
+i/p - category id , product id
+o/p - a message
+
+4.4 Display category n associated product details , in a single join query
+i/p - category id
+o/p - category + product details
+
+
+Day 10
+
+1. Mandatory work 
+ Copy n import day10_spring project , in your workspace
+ - as existing Maven Project
+ - Force update
+ - Run Maven goals 
+  - clean compile
+
+Refer to 
+ - dependency beans (Teacher n implementation classes)
+ -dependent bean (School n PublicSchool)
+ - TestSpringContainer.java (tester - main class)
+ - bean-config.xml
+  - XML based configuration
+ - Revise spring bean life cycle
+ - constructor based D.I
+
+Refer 
+"day10-data\day10_help\spring sequence.rtf"
+ "day10-data\day10_help\diagrams\spring-bean-life-cycle.png"
+ "day10-data\day10_help\D.I Details.txt"
+
+2. Complete Pending Work
+
+3. Copy n import day10.1 project , in your workspace
+Revise 
+one-one 
+many-many association
+value types 
+
+4. Optional work
+If time permits 
+Create the entities for E-R (Refer - "day9-data\day9_help\Food Delivery App E-R diagram.png")
+Order 1<---->* OrderLine
+User (Customer) 1 <-----* Order
+Restaurant 1<----* Order
+FoodItem 1 <----* OrderLine
+
+Can customer add multiple food items to any order ? Yes !
+Can a food item exist in multiple orders ? Yes !
+
+Then what is the association between Order n FoodItem ?
+many-many right ?
+
+So can we use @ManyToMany annotation here ? NO 
+Why ??????????
+
+
+Order details 
+ - id , creation date , last updated
+ - delivery charges
+ - order amount , order status ,
+ - order delivery time (promised) eg - In 30 minutes , after placing the order.
+ FKs - customer_id
+      - restaurant_id
+
+
+OrderLine details 
+ - id , creation date , last updated
+ - quantity
+ - sub total
+ - FKs
+  - food_item_id
+  - restrurant_id (optional BUT recommended)
+
+ 
+Day 11
+
+1. We will start with quick revision n implementation of Spring MVC
+
+ - copy n import 
+  spring_mvc_hibernate , in your workspace
+ - Force update
+ - Maven build goals - clean compile
+
+
+1.1 Open  - "day11-data\day11_help\Spring MVC Concepts n implementatio.txt"
+1.2 Diagram - "day11-data\day11_help\diagrams\Spring MVC flow diagram.png"
+
+Objective -
+Understand n test Spring MVC flow.
+Render index.page
+
+2. Mandatory revision 
+Open these readmes n diagrams
+ - "day11-data\day11_help\readmes\D.I Details.txt"
+ - "day11-data\day11_help\diagrams\spring wiring.png"
+
+2.1 import day11.1 
+ - to understand Constructor based D.I 
+ - setter based D.I
+
+Refer to bean-config xml file , Dependent bean - PublicSchool n Tester class.
+
+2.2 import day11.2 
+ - to understand Factory method based D.I
+ 
+Refer to bean-config xml file , Dependent bean - PublicSchool n Tester class.
+
+2.3 import day11.3 
+ - to understand autowire byName (setter based D.I)
+ 
+Refer to bean-config xml file , Dependent bean - PublicSchool n Tester class.
+
+2.4 import day11.4 
+ - to understand autowire byType (setter based D.I)
+ 
+Refer to bean-config xml file , Dependent bean - PublicSchool n Tester class.
+
+2.5 import day11.5 
+ - to understand autowire constructor (constructor based D.I)
+ 
+Refer to bean-config xml file , Dependent bean - PublicSchool n Tester class.
+
+
+2.6 import day11.6 
+ - to understand hybrid configuration approach (lesser xml tags n majority annotations)
+ 
+Refer to bean-config xml file , 
+
+Annotations from 
+ - Dependency beans 
+ - Dependent bean - PublicSchool
+
+ and Tester class.
+
+
+Day 12
+
+Refer to - "day12-data\day12_help\Dev Steps.txt"
+Follow it along with code.
+
+1. Copy n import day12.1 , to revise
+  -  Spring MVC Flow
+  - ModelAndView
+  - Model Map
+
+2. Copy n import day12.2 , to revise
+   - Spring MVC with Hibernate Integaration (w/o spring boot)
+   - revise all the layers
+   - Controller , Service , DAO , Entities , DB
+
+3. Most important - 
+ Copy n import day12.3 , to revise
+   Spring Boot MVC with Hibernate integration.
+ - Here earlier project is ported with Spring Boot
+ - Hibernate Session is replaced by EntityManager.
+
+4. Optional BUT recommended assignment
+ Refer - "day12-data\day12_help\optional category product assignment.png"
+   Copy from spring_boot_mvc_template 
+    - to add Maven dependencies.
+    - edit DB password from application.properties (from <resources>
+   Create all the layers , as discussed.
+   Try to solve the assignment!
+  Here you will get the confidence of doing everything from scratch.
+
+Day 13
+
+1. Copy n import day13.1 in your workspace
+    Edit DB password from application.properties
+    Trace complete flow using 
+    - "day13-data\day13_help\Spring Boot MVC Steps.txt"
+   
+  Layers - RestaurantController , RestaurantService , RestaurantDao , Restaurant 
+
+  We have completed , below functionalities , so far.
+ - list available restaurants
+ - delete (soft)
+ - update 
+ 
+
+2. Mandatory assignment
+  Complete day12's category-product assignment
+  Flow diagram - 
+  "day12-data\optional category product assignment.png"
+
+Suggested dev steps
+
+1. Copy n import from - git 
+ "template projects\spring_boot_mvc_template"
+
+2. Create from scratch
+ Category n Product entities
+ Category Dao layer
+ Category Service layer
+ Category Controller
+ You can copy from supplied JSP n edit.
+
+Hint - 
+Category DAO -
+@Query("select c from Category c left join fetch c.products where c.id=:id")
+Optional<Category> fetchCompleteDetails(Long id);
+
+
+3. Optional challenging work.
+After completing above work 
+ - Add Update n Delete actions for Product
+ - Add New Product link
+ - Delete - hard delete.
+
+
+Day 14
+
+1. Copy n import 
+ "template projects\spring_boot_backend_template"
+Force Update
+Run as - Maven - build - clean compile goals
+
+ - This will download spring boot related dependencies.
+
+2. Refer to supplied front end app 
+ - "day14-data\day14_help\React Front End\category-products-frontend"
+ - Today we will only focus on single resource Category
+ 
+Solve - 
+ CRUD with Category resource.
+Mandatory assignment - complete CRUD n test it eith with psotman or swagger UI
+
+
+3. Copy n import day14.1 
+Its a demo of monolithic Spring MVC web app , with spring boot
+(JSP based view layer)
+
+
+4. Important readmes 
+1. "day14-data\day14_help\day14-sequence.rtf"
+2. "day14-data\day14_help\REST\readmes\REST simplified.txt"
+3. "day14-data\day14_help\REST\readmes\RestController vs MVC Controller n Annotations.txt"
+
+ 
+Day 15
+Important day from your project objectives
+
+Please follow these steps for clear understanding
+1. Copy n import day15_backend in your workspace
+ - edit DB password
+ - Force update.
+
+2. Refer to RestaurantController
+ - Trace the end points 
+   
+   2.1 getRestaurantDetails
+   - to understand global exception handling 
+   - Response DTO
+
+3. Refer to UserController 
+ - Trace sign in endpoint
+  - userSignIn
+  - Understand request n resp dto.
+
+4.  Hands on - 
+Refer to - RestaurantController
+
+   4.1 addNewRestaurant - replace entity by request DTO here n try it out.
+
+   4.2 listAvailableRestaurants 
+   (There will be a problem here , try to fix it 
+    Hint - Use DTO)
+   4.3 deleteDetails - replace String by ApiResponse
+   4.4 updateDetails - replace String by ApiResponse
+
+
+Day 16 
+
+1. Discuss in detail 
+ - lab exam practice question
+
+2.Copy and  import day16_backend 
+ - Revise all endpoints of 
+  - RestaurantController 
+   - uses DTOs n validations
+ - UserController
+ - FoodItemController
+
+ in a top down manner.
+ Pay special attention to Entities n DTOs.
+
+ 
+

@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Demo</title>
+  </head>
+  <body>
+    <h1 id="myHeader">Welcome to DOM</h1>
+    <div id="myMessage" style="color: red"></div>
+    <input type="button" value="Click Me" onclick="DoSomething()" />
+    <script>
+      function DoSomething() {
+        var refToH1 = document.getElementById("myHeader");
+        refToH1.innerText = "ABCD";
+        refToH1.style.backgroundColor = "yellow";
+
+        var refToDiv = document.getElementById("myMessage");
+        refToDiv.innerText = "Name is required!";
+      }
+    </script>
+  </body>
+</html>

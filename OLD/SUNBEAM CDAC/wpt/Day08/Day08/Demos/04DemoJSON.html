@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <button onclick="GetData()">Click Me</button>
+      <br />
+      <table border="1" style="width: 300px">
+        <tbody id="myTableBody"></tbody>
+      </table>
+    </center>
+    <script>
+      function GetData() {
+        var helperToGetData = new XMLHttpRequest();
+        helperToGetData.onreadystatechange = function () {
+          if (
+            helperToGetData.readyState == 4 &&
+            helperToGetData.status == 200
+          ) {
+            var refTomyTableBody = document.getElementById("myTableBody");
+            var dataFromWebsite = JSON.parse(helperToGetData.responseText);
+
+            var people = dataFromWebsite.data;
+
+            for (var index = 0; index < people.length; index++) {
+              var person = people[index];
+
+              var row =
+                `<tr>
+        <td>` +
+                person.id +
+                `</td>
+                    <td>` +
+                person.first_name +
+                `</td>
+                    <td>` +
+                person.email +
+                `</td> <td>` +
+                `<img src="` +
+                person.avatar +
+                `" height="70px" width="70px"/> 
+        </td>
+                 </tr>`;
+
+              refTomyTableBody.innerHTML = refTomyTableBody.innerHTML + row;
+            }
+          }
+        };
+        helperToGetData.open("GET", "http://127.0.0.1:5500/data.json");
+        helperToGetData.send();
+      }
+    </script>
+  </body>
+</html>

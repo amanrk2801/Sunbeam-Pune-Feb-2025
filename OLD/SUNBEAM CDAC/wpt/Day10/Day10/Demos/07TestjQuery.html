@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Click Me</button>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      $("#btn").click(function () {
+        $.ajax({
+          url: "https://reqres.in/api/users",
+          method: "GET",
+          contentType: "application/json",
+          success: function (result) {
+            debugger;
+            for (let index = 0; index < result.data.length; index++) {
+              const user = result.data[index];
+              alert(user.first_name);
+            }
+          },
+          error: function (errro) {
+            alert("something went wrong!");
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

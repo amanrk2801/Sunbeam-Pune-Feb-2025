@@ -1,0 +1,44 @@
+Q.1
+int main() {
+    char ary[]="DiscoveryChannel";
+    printf(ary); // same as  printf("DiscoveryChannel");
+    return 0;
+}
+A) D
+B) DiscoveryChannel
+C) Discovery
+D) Compiler error
+Answer: B
+
+// int printf(const char *format, ...);
+	// 1st arg is string address.
+
+Q.2
+int main(void) {
+	char str[]="SunBeamITPark";
+	printf("%s\t%s\t%s",&str[7],&7[str],str+7);
+	return 0;
+}
+A) ITPark 	ITPark 	ITPark
+B) Compile time error
+C) 32 32 IT Park
+D) IT Park IT Park SunBeam IT Park
+Answer: A
+
+Q.3
+void main() {
+	void *ptr_name=NULL;
+	char ch=115, *name="sunbeam";
+	int j=117;
+	ptr_name=&ch;
+	printf("%c", *(char*)ptr_name);
+	ptr_name=&j;
+	printf("%c", *(int*)ptr_name);
+	ptr_name=name;
+	printf("%s", (char*)ptr_name+2);
+}
+A. sunbeam
+B. s117nbeam
+C. 115unbeam
+D. 115117unbeam
+Answer: A

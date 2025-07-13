@@ -1,0 +1,67 @@
+
+
+		how 1 is stored 
+
+		binary of 1  is stored 
+
+				0001
+
+
+		what if i want to store the -ve value 
+		how -ve value are stored 
+
+		-ve value are stored in 2s compliment format  
+
+
+		-1 + 1 --> 0 
+
+
+		1 --> 0000  0001 
+
+
+		-1 
+		2s compliment 
+
+		find out binary of 1 --> 0001 
+
+		1s compliment --> 1110 
+
+		2s compliment --> 
+
+			1 1 1 0 --> 1s compliment 
+
+		+	      1
+		     ---------------		
+		        1 1 1 1 
+
+		-1 is represented in 1 1 1 1 ( 2s compliment) 
+
+
+			 1  1  1 
+			 0 0 0 1   --> binary of 1 
+			 1 1 1 1   --> binary of -1 ( 2s compliment ) 
+		----------------------------
+			 0 0 0 0 --> decimal equ is 0 
+ 	
+
+
+
+
+
+		
+
+					 
+		
+
+
+
+
+
+
+
+
+
+
+
+
+

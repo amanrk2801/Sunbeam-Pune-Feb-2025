@@ -1,0 +1,37 @@
+DAY 6 : Poll Questions
+Which of the following implements the module in the program?
+a) macro
+b) header files
+c) macro & header files
+d) interfaces
+
+Answer : B
+
+
+What are the constant member functions?
+a) Functions which doesn’t change value of calling object
+b) Functions which doesn’t change value of any object inside definition
+c) Functions which doesn’t allow modification of any object of class
+d) Functions which doesn’t allow modification of argument objects
+
+Answer : A
+
+
+
+The syntax for defining the static data members is __________
+a) dataType className :: memberName = value;
+b) dataType className : memberName = value;
+c) dataType className . memberName = value;
+d) dataType className -> memberName =value;
+
+Answer : A
+
+Which is the correct syntax for declaring static data member?
+a) static mamberName dataType;
+b) dataType static memberName;
+c) memberName static dataType;
+d) static dataType memberName;
+
+Answer : D
+
+

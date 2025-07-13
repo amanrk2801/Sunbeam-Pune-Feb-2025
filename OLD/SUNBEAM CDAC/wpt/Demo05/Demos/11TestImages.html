@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="img20.jpg" id="myImage" height="200px" width="200px" />
+    <br />
+    <input type="button" value="Click Me" onclick="DoSomething()" />
+    <script>
+      var flag = true;
+
+      function DoSomething() {
+        var refToImage = document.getElementById("myImage");
+        if (flag == true) {
+          refToImage.src = "img28.jpg";
+          flag = false;
+        } else {
+          refToImage.src = "img20.jpg";
+          flag = true;
+        }
+      }
+    </script>
+  </body>
+</html>

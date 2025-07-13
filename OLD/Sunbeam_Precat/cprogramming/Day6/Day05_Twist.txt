@@ -1,0 +1,118 @@
+#include <stdio.h>
+int main( void )
+{
+		int num1,num2,num3, num4;
+
+		num1 = 100 ; num2 = 200 ;
+
+		num2= ++num1;
+		// num2 = 101 
+		// num1 = 101 
+
+		num3= num2--/2;
+		num3= 101 / 2 --> 50 --> num3 = 50 
+		num2--> num2-- -> 100 
+
+		// num2 = 100 num3=50 num1=101 
+
+		// -%10d --> - - - - - - - - - - + 2 spaces --> 12  		
+
+		num4 = printf(" %-10d ", ++num1 ) + ++num2; // num1 --> 102 
+		//num4 = 12 + ++num2-> 12 + 101 --> 113
+		//      (10+2spaces)  		
+		//++num1 --> 102 
+		// ++num2 --> 101   
+
+
+		printf("%10d\t",num3);// 50
+
+		printf("%-10d",num4); // 113 
+ 
+		return 0;
+}
+		 
+
+
+		#include<stdio.h>
+		int main( void )
+		{
+			int num1 = 0, num2 = -1 , num3 = -2, num4 = 1, ans;
+			ans = num1++ || num2++ && ++num4 || num3++;
+
+			// num1++ || (num2++ && ++num4) || num3++;
+
+			//  num1++-> post incr --> num1 value 1 
+
+			// num2++ --> post incr --> -1 is non zero so true --> -1 becomes 0 ( post) 
+			// ++num4 --> pre incr --> 2 --> 
+			// exp (num2++ && ++num4) becomes true 
+
+			// num3 --> no change 
+
+			printf("%d %d %d %d %d",num1,num2,num3,num4,ans);
+			//			 1    0    -2   2    1 	
+			return 0;
+		}
+
+
+		#include<stdio.h>
+		int main( void )
+		{
+		    int val=0;
+		    int value = val++ || ++val==1 || val--;
+		    //		 0(post) || 2 == 1 || val-- --> 1  
+					    false 		 		     
+	
+		    printf(" val=%d value=%d", val, value);
+		    //				1    1   				
+		    return 0;
+                }	
+
+
+		#include<stdio.h>
+		int main( void )
+		{
+			int x1=1, x2=2, x3=3;
+			int val=!(!((x1+x2)<(x3+1)));
+
+			//  (1 + 2) < ( 3 + 1 ) 
+			//  ( 3 ) <  ( 4 ) --> T --> 1 
+			//    !T --> F
+			//    !F --> T  
+			
+			printf(" val=%d ", !val); // !T --> F 
+					    	
+			return 0;
+		}
+
+
+
+			int num1 = 0, num2 = -1 , num3 = -2, num4 = 1, ans;
+
+			++num1 || (num2++ && ++num4 )  || num3++;
+
+				
+
+			num1++ ||( num2++ && ++num4) || num3++  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

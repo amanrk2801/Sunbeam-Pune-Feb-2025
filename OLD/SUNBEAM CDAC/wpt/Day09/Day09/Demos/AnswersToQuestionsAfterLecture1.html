@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <div
+        style="height: 400px; width: 400px; background-color: yellow"
+        id="mydiv"
+      >
+        <br />
+      </div>
+    </center>
+    <script>
+      var users = [
+        { no: 1, name: "mahesh" },
+        { no: 2, name: "nilesh" },
+        { no: 3, name: "ratan" },
+      ];
+      var refToMyDiv = document.getElementById("mydiv");
+
+      for (var index = 0; index < users.length; index++) {
+        var user = users[index];
+        var innerDiv = `<div
+        style="height: 100px; width: 100px; background-color: green"
+        id="${user.no}"
+      >
+        ${user.name}
+        <button style="background-color:red; color:white" onclick="Remove(${user.no})">Remove</button>
+      </div> <br/><br/>`;
+
+        refToMyDiv.innerHTML = refToMyDiv.innerHTML + innerDiv;
+      }
+
+      function Remove(id) {
+        var refToInnerDiv = document.getElementById(id);
+        refToInnerDiv.remove();
+      }
+    </script>
+  </body>
+</html>

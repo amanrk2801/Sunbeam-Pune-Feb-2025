@@ -1,0 +1,25 @@
+DBT Queries (Practice Qs):-
+
+1. SELECT ......... display fname and lname in uppercase and concat the two as full name
+
+2. SELECT .......... implement INITCAP(ename) in MySQL
+
+3. SELECT .......... display the ENAMEs centre-justfied
+Assume screen width is 80 characters
+
+4. SELECT .......... display the ENAMEs with the Vowels removed
+
+SMITA -> SMT
+SUNBEAM -> SNBM
+
+5. SELECT .......... spell out the SALs upto Rs. 5 million. Ignore paise.
+
+Rs. Two thousand five hundred
+Rs. Four thousand seven hundred fifty
+
+6. SELECT .......... SYSDATE(), HIREDATE ........
+e.g. SYSDATE -> 20th Mar, 2024, 7:30 pm
+HIREDATE -> 1st Feb, 2023, 10:00 am
+Display the experience of the employees in years, remainder months, remainder days, remainder hours, remainder minutes, remainders seconds
+e.g.
+1 year, 1 month, 19 days, 9 hours, 30 mins

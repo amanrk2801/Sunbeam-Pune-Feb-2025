@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <table border="1" style="width: 300px">
+        <tbody id="myTableBody"></tbody>
+      </table>
+    </center>
+    <script>
+      debugger;
+
+      //We are creating a helper object here
+      var helperToGetData = new XMLHttpRequest();
+      //helperToGetData.readyState is initially 0
+
+      helperToGetData.onreadystatechange = function () {
+        //this function code gets called when readystate changes
+        //from 0 to 1, 1 to 2, 2 to 3, 3 to 4
+        // debugger;
+        //console.log("ReadyState is " + helperToGetData.readyState);
+        //readystate = 0 : initial
+        //readystate = 1 : packet created
+        //readystate = 2 : packet sent
+        //readystate = 3 : waiting
+        //readystate = 4 : reply received from server
+        if (helperToGetData.readyState == 4 && helperToGetData.status == 200) {
+          // debugger;
+          var refTomyTableBody = document.getElementById("myTableBody");
+          var dataFromWebsite = JSON.parse(helperToGetData.responseText);
+
+          var people = dataFromWebsite.data;
+
+          for (var index = 0; index < people.length; index++) {
+            var person = people[index];
+
+            var row =
+              `<tr>
+        <td>` +
+              person.id +
+              `</td>
+                    <td>` +
+              person.first_name +
+              `</td>
+                    <td>` +
+              person.email +
+              `</td> <td>` +
+              `<img src="` +
+              person.avatar +
+              `" height="70px" width="70px"/> 
+        </td>
+                 </tr>`;
+
+            refTomyTableBody.innerHTML = refTomyTableBody.innerHTML + row;
+          }
+        }
+      };
+
+      //We are asking helper object to prepare a http request packet
+      //we are providing information to helper like:
+      //HOW TO send the data if any - i.e. GET / POST
+      //GET: Inside Header
+      //POST: Inside BODY
+      helperToGetData.open("GET", "http://127.0.0.1:5500/data.json");
+      //On OPEN() helperToGetData.readyState becomes 1
+
+      //Below Line will actually send the packet over NETWORK
+      //On send() helperToGetData.readyState becomes 2
+      helperToGetData.send();
+
+      //After send we will be waiting for any reply from server
+      //so readystate will become 3
+    </script>
+  </body>
+</html>

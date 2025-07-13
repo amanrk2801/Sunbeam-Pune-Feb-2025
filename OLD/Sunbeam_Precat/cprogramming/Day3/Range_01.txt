@@ -1,0 +1,99 @@
+*************************************************************************************************	
+	signed  
+
+			char ch ='A'; 
+
+			char --> 1 byte 
+		
+			by default signed 
+
+			msb --> 1 bit + 7 bit 
+			
+
+			8 bits 
+
+			max range -->  ( 2 to the power n-1 ) - 1
+				 
+				  -->  (  2 to the power 8 - 1 ) - 1
+
+				  -->  ( 2 to the power 7 ) - 1 
+		
+				  --> 	128  - 1
+
+				 -->    127 ( max range ) 
+
+
+			int num = 100; 
+
+			// int --> 4 bytes 
+			//  32 bits
+			// 1  --> MSB ( sign)  
+			// 31  
+			
+			By default signed 
+
+			1 msb + 31 bits 
+
+			32 bits 
+
+			max range -->  ( 2 to the power n - 1 ) - 1 
+
+				  --> 	( 2 to the power 31 ) - 1 
+
+				  --> 	2,147,483,648   -  1
+
+				  -->   2,147,483,647
+********************************************************************************************************
+
+	unsigned 
+
+			unsigned char ch;
+
+			char size is 8 bits 
+			
+			( no msb bit ) 	
+
+			max range --> ( 2 to the power n ) - 1 
+			
+				  -->  (2 to the power 8 ) - 1 
+
+				  -->   256 - 1 
+			
+				  -->   255  
+
+
+
+			unsigned int num 
+
+			int --> 4 bytes --> 32 bits ( no msb bit as it is unsigned ) 
+
+
+			max range -->  ( 2 to the power n ) - 1 
+
+				  -->  (  2 to the power 32 ) - 1 
+
+				  -->  4,294,967,296   -   1
+
+				  -->  4,294,967,295
+
+			min range --> 0  
+
+				  
+					
+
+	    
+	
+
+
+
+			           		
+		
+
+			
+
+		
+		
+		
+ 	 
+
+				   	 

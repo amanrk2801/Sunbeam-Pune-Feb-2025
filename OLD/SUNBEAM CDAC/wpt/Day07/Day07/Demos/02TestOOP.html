@@ -1,0 +1,119 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //------------------Literal Syntax of object creation
+
+      //   var person = {
+      //     No: 1,
+      //     Name: "Mahesh",
+      //     Address: "Pune",
+      //     Print: function () {
+      //       //debugger;
+      //       console.log(this.No + this.Name + this.Address);
+      //     },
+      //   };
+
+      //   var person2 = person;
+      //   person2.Name = "ABCD";
+
+      //   person.Print();
+      //   person2.Print();
+
+      //   var person = {
+      //     No: 1,
+      //     Name: "Mahesh",
+      //     Address: "Pune",
+      //     IsEmployee: true,
+      //     IsInManagement: undefined,
+      //     Skills: ["Java", "Web", "C"],
+      //     Print: function () {
+      //       debugger;
+      //       console.log("No =  " + this.No);
+      //       console.log("Name =  " + this.Name);
+      //       console.log("Address =  " + this.Address);
+      //       console.log("IsEmployee =  " + this.IsEmployee);
+      //       console.log("IsInManagement =  " + this.IsInManagement);
+      //       console.log("Skills: ");
+      //       for (var i = 0; i < this.Skills.length; i++) {
+      //         console.log(this.Skills[i]);
+      //       }
+      //     },
+      //   };
+
+      //   debugger;
+      //   person.Print();
+    </script>
+
+    <script>
+      //-----------Constructor Function Syntax of object creation
+
+      //   var Person = function () {
+      //     this.No = no;
+      //     this.Name = name;
+      //     this.Address = address;
+      //     this.Print = function () {
+      //       console.log(this.No + this.Name + this.Address);
+      //     };
+      //   };
+
+      //   debugger;
+      //   var p1 = new Person(10, "Sachin", "Mumbai");
+      //   var p2 = new Person(20, "Rohit", "Delhi");
+      //   var p3 = p1; //here p3 is Referring same object pointed by p1
+      //   p1.Print();
+      //   p2.Print();
+    </script>
+
+    <script>
+      //   class Person {
+
+      //     constructor(no, name, address) {
+      //       this.No = no;
+      //       this.Name = name;
+      //       this.Address = address;
+      //     }
+
+      //     Print() {
+      //       console.log(this.No + this.Name + this.Address);
+      //     }
+      //   }
+
+      //   var p1 = new Person(7, "MSD", "Chennai");
+      //   var p2 = new Person(8, "Rishabh", "Delhi");
+      //   p1.Print();
+      //   p2.Print();
+    </script>
+
+    <script>
+      class Person {
+        constructor(no, name, address) {
+          this.No = no;
+          this.Name = name;
+          this.Address = address;
+        }
+
+        Print() {
+          console.log(this.No + this.Name + this.Address);
+        }
+      }
+
+      class Employee extends Person {
+        constructor(no, name, address, deptname) {
+          super(no, name, address);
+          this.DeptName = deptname;
+        }
+        Print() {
+          super.Print();
+          console.log(this.DeptName);
+          //   console.log(this.No + this.Name + this.Address + this.DeptName);
+        }
+      }
+
+      var e1 = new Employee(10, "sachin", "pune", "mi");
+      e1.Print();
+    </script>
+  </body>
+</html>

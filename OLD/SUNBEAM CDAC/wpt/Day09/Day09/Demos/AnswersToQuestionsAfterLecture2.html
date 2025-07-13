@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="counterDiv"></div>
+    <div
+      style="height: 200px; width: 200px; background-color: yellow"
+      id="mydiv"
+    ></div>
+    <script>
+      var refToMyDiv = document.getElementById("mydiv");
+      var refTocounterDiv = document.getElementById("counterDiv");
+      refToMyDiv.style.opacity = 0;
+
+      var counter = 0;
+
+      window.setInterval(function () {
+        counter = counter + 1;
+        refTocounterDiv.innerText = counter;
+
+        if (counter == 70) {
+          var refToMyDiv = document.getElementById("mydiv");
+          refToMyDiv.style.position = "absolute";
+          refToMyDiv.style.left = "500px";
+          refToMyDiv.style.top = "300px";
+          refToMyDiv.innerText = "Some Text @ Some Position";
+          refToMyDiv.style.opacity = 1;
+        }
+      }, 100);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="f1()"></button>
+    <script>
+      //Check(OnSuccess, OnFailure);
+      var promise = new Promise(Check);
+      promise.then(OnSuccess);
+
+      function Check(resolve, reject) {
+        if (10 > 2) {
+          resolve();
+        } else {
+          reject();
+        }
+      }
+
+      function OnSuccess() {
+        debugger;
+        console.log("TRUE!!");
+      }
+
+      function OnFailure() {
+        console.log("FALSE");
+      }
+    </script>
+  </body>
+</html>

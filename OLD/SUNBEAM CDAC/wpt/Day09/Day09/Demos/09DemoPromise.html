@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <button onclick="GetData()">Get Data</button> <br />
+      <hr />
+      <div id="myData"></div>
+    </center>
+    <script>
+      function fetch() {
+        var promise = new Promise(GetDataFromServer);
+        return promise;
+      }
+      function GetData() {
+        fetch().then(OnSuccess);
+      }
+      function GetDataFromServer(resolve) {
+        var helper = new XMLHttpRequest();
+        helper.onreadystatechange = function () {
+          if (helper.readyState == 4 && helper.status == 200) {
+            resolve(helper.responseText);
+          }
+        };
+        helper.open("GET", "https://reqres.in/api/users");
+        helper.send();
+      }
+
+      function OnSuccess(data) {
+        var refToMyDiv = document.getElementById("myData");
+        var result = JSON.parse(data);
+        for (var i = 0; i < result.data.length; i++) {
+          var h3 = `<h3>${result.data[i].first_name}</h3>`;
+          refToMyDiv.innerHTML = refToMyDiv.innerHTML + h3;
+        }
+      }
+    </script>
+  </body>
+</html>

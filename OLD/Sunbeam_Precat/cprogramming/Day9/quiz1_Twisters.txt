@@ -1,0 +1,137 @@
+/*
+What is the use of putchar()?	
+	- to print a char.
+	char ch = 'A';
+	putchar(ch);	// print A
+	putchar(97);	// print a
+similar to printf -- %c
+	printf("%c", ch);
+*/
+
+/*
+#include <stdio.h>
+int main() 
+{ 
+	int a = 10, b = 2, c=0; 
+	a = !( c = b == c) && ++b;
+
+
+
+ 
+	// b == c --> 2 == 0 --> False (0)
+	// c = 0 (assignment operator)
+	// c = b == c --> 0
+	// ! 0 --> 1 --> True (first condition in &&)
+	// ++b --> ++2 --> 3 --> True (second condition in &&)
+	// a = True && True = 1.
+	
+	// a = 1, b = 3, c = 0
+	c += ~( a + b--);
+
+
+	// c = c + ~( a + b--);
+	//	a + b-- --> 1 + 3-- --> 4 ~(4) --> -(n+1) --> -5 
+	//  ~4 = -5
+	// c = 0 + -5
+	// c = -5
+	// b = 2 (post decrement)
+	printf("%d %d %d\n", b, c, a); 
+	// 2 -5 1
+	return 0; 
+}
+*/
+
+// a += b ---> a = a + b;
+
+/*
+#include <stdio.h>
+void main() { 
+	int a,i=4,j=6; 
+	//a=- -i+- -i+- -5; 
+	//a = - -i + - - i + - -5; 
+	//a = -(-i) + -(-i) + -(-5);
+	a = i + i + 5; // 4 + 4 + 5 = 13
+	printf("%d %d",a,i); // 13, 4
+	return; 
+}
+ 
+
+//--i --> i = i - 1 // decrement operator
+//-(-i) --> +i // -ve -ve become +ve
+//- -i --> -(-i) --> +i
+*/
+
+
+// signed is promoted to unsigned 
+//
+/*
+
+#include<stdio.h>
+int main() 
+{ 
+	int num1=-2; 
+	unsigned int num2=10; 
+	
+	int ans= ~!(num1 < num2);  //4294967294 < 10
+	printf("\n ans=%d", ans); 
+	return 0; // -2 
+}
+
+// 1 --> ~(1 ) --> -( n + 1 ) --. - 2 
+// UINT_MAX --> 4294967296
+// num1 < num2
+// num1 is promoted to unsigned int.
+//	-2 is now considered as +ve (unsigned) -->  4294967294
+// 4294967294 < 10 --> False 
+// ! False --> True (1)
+// ~1 --> -2 --> ~ ---> -(n+1) --> -2   
+*/
+
+
+
+
+
+
+#include<stdio.h> int main() 
+{ 
+	int a=2, b = 7,res; 
+	int y=10; 
+	res=(y++>9 && y++!=11 && y++>11) && (a=b<4? b<<1 : ++b>4 ? 	7>>1 : a);
+	// 		F 		 && 	skip 	
+	 printf("\n%d %d %d %d",y,a,b,res); 
+	return 0; 
+}
+
+
+		
+	
+
+#include <stdio.h>
+int main(void)
+{
+int a=3,b=6;
+printf("%d ", a!=b?0?b:a:b);
+return 0;
+}
+/*
+void main() {
+	int a = 3, b = 6;
+	printf("%d\n", a != b ? 0 ? b : a : b);
+}
+
+// a != b ? (0 ? b : a) : b
+// a != b ? a : b
+// a != b --> 3 != 6 --> true --> first expression = "a" --> 3
+*/
+	num = 3 
+	++num++
+
+	4++ 
+	4 = 4 + 1 // l value error  	
+
+*************************************************************************************************
+
+
+
+
+

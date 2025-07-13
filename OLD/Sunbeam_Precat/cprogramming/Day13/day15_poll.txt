@@ -1,0 +1,79 @@
+Q.1
+#include<stdio.h>
+int main( void )
+{
+	int arr[4]={10,20,30,40};
+	--2[arr]; // 30 --> -- --> 29
+	printf("-%d", --2[arr]); 29 --> -- --> 28
+		// -28
+	return 0;
+}
+A. -29
+B. -28
+C. Comipler error
+D. 28
+Answer: B
+
+--2[arr] --> --(2[arr]) --> --(arr[2])
+
+Q.2
+By default variables are passed by ____ to functions and by default array are always passed by ______ to functions. 
+A. value, address
+B. value, value
+C. address, address
+D. address, value
+Answer : A
+
+Q.3
+#include <stdio.h>
+int main(void)
+{		       4 
+	int arr[5]={5-3*0-1,10,15,20,25};
+
+	printf("%8d",arr[arr[0]]); // arr[ 4  ]
+	printf("%8d",arr[arr[1-1]]);
+	printf("%8d",arr[arr[1*0]]);
+	printf("%8d",arr[arr[0/1]]);
+	return 0;
+}
+A) 25	25	25	25
+B) 25	4	4	4
+C) Compiler Error
+D) 4	4	4	4
+Answer: A
+
+Q.4
+#include<stdio.h>
+int main()
+{
+	int arr[10]={1 ,2 ,3 ,4 ,5 };
+	int *ptr=&arr[8];
+	printf("-%d", *(ptr-5));
+   	return 0;
+}
+A. 4
+B. -3
+C. -5
+D. -4
+Answer: D
+
+// &arr[0] = 400 (assume)
+// &arr[8] = 432 (8 ints will take 32 bytes, so base address + 32)
+// ptr = &arr[8] = 432
+// ptr - 5 = ptr - 5 * scale factor(ptr) = ptr - 5 * 4 = 432 - 20 = 412
+// *(ptr - 5) = * 412 = 4
+// -4
+
+Q.5
+An array Index starts with?
+A) -1
+B) 0
+C) 1
+D) 2
+Answer : B
+
+arr[0]
+	--> *(arr + 0) --> *arr --> very first element of array.
+
+arr[1]
+	--> *(arr + 1) --> *next addr

@@ -1,0 +1,345 @@
+
+		
+				
+		
+
+
+
+*******************************************************************************************************
+#include<stdio.h>
+int main()
+{
+	char ch=948;
+
+	printf("%d",ch); // -76 
+
+}
+
+o/p = 
+
+Equivalent of 948 binary - 1110110100		
+		
+		( 8 bit equivalent   = 1 0 1 1 0 1 0 0 ) 
+
+
+		char ( 8 bits = 1 for sign and 7 for storage)
+	       (sign)	
+		8  	7 	 6	  5 	 4 	 3 	 2 	 1 
+	        1       0        1        1      0       1       0       0 
+
+		MSB is 1 so number is negative ( need to find 2s compliment)
+
+--> 1s compliment --> 				1 0 1 1 0 1 0 0
+
+						0 1 0 0 1 0 1 1 
+				         +		      1
+					--------------------------------
+--> 2s compliment --> 				0 1 0 0	1 1 0 0	
+			Decimal equivalent is -76 
+
+II]
+#include<stdio.h>
+int main()
+{
+	char ch=890;
+
+	printf("%d",ch);
+
+}
+
+o/p = 
+
+Equivalent of 890 binary - 1101111010
+		
+		( 8 bit equivalent   = 0	1	1	1	1	0	1	0) 
+
+
+		char ( 8 bits = 1 for sign and 7 for storage)
+	       (sign)	
+		8  	7 	 6	  5 	 4 	 3 	 2 	 1 
+	        0       1        1        1      1       0       1       0 
+
+		MSB is 0 so number is positive ( no  need to find 2s compliment)
+		calculate the direct decimal equivalent of -->  0       1        1        1      1       0       1       0 
+		122 is the decimal equivalent 
+
+             
+		
+
+			
+*****************************************************************************************************************************************			
+				For signed
+
+
+#include<stdio.h>
+int main()
+{
+	unsigned char ch=948;
+
+	printf("%d",ch);
+
+}
+
+o/p = 
+
+Equivalent of 948 binary - 1110110100		
+		
+		( 8 bit equivalent   = 1 0 1 1 0 1 0 0 ) 
+
+
+		char ( 8 bits = 1 for sign and 7 for storage)
+	       	
+		8  	7 	 6	  5 	 4 	 3 	 2 	 1 
+	        1       0        1        1      0       1       0       0 
+
+			Decimal equivalent is 180
+
+******************************************************************************************************************************* 
+                      
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*******************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MY PERSONAL MEETING ID : 826 464 2625
+	
+	Password - sunbeam 	
+
+
+
+
+
+
+
+	@all Hello Good evening 
+
+MY PERSONAL MEETING ID : 826 464 2625
+
+Password - sunbeam 
+
+Please note down my credentials 
+
+Tommorrow Please stay Online here from 3 to 4 we will have the LAB 
+
+You will recieve the call from my side here just accept that call in case if you miss the call you can join my session with above credentials 
+
+Tomorrow again i will post the reminder 
+
+
+You can reply to this message ( As we reply to facebook post similar kind ) 
+
+
+
+	#include<stdio.h>
+					int fun(int a)
+					{
+					  if(a == 0)
+						 return a+1;
+
+					return 2*a+fun(a-1);
+					}
+
+					int main()
+					{
+					     printf("%d\n", fun(5));
+					     return 0;
+					}
+
+
+				n = 5 ;
+
+
+				2 * 5 + fun ( 4 ) -->  2 * 5 + 21 --> 31 
+
+
+				2 * 4 + fun ( 3 ) --> 2 * 4 + 13 
+
+				2 * 3 + fun ( 2 ) --> 2 * 3 + 7
+
+				2 * 2 + fun ( 1 ) --> 2 * 2 + 3 
+
+				2 * 1 + fun ( 0  ) -->  2 + 1   
+
+
+
+
+
+
+
+
+
+
+
+
+char ch;
+
+		char -> 1 byte 
+
+		8 bits 
+		 1 + 7 bits 
+		sign
+		( 2 raise to 7 - 1 )
+		( 128 - 1 ) --> 127 to -128
+
+
+
+		int b:3 
+		
+		1 + 	2 bit
+		sign
+	
+		( 3 to -4 ) 
+
+		we are storing  5 
+		
+		4 --> -4
+		5 --> -3
+	
+		
+		
+
+			
+
+
+
+
+
+		int num = 1 ;
+
+		0001  
+
+		  32 bits 
+
+	1 bit is for signed 
+	31 bit is stored for 10 
+
+	bit32 	bit31			bit4 bit3 bit2 bit1 	
+	 0 				  0    0   0 	1 
+
+
+
+		0 1 0 0
+
+		0 0 1 0 1 0 1 
+
+
+
+
+	unsigned int a:3 --> bit3 bit2 bit1
+				1   0	0
+
+
+	int b:3; --> bit3 bit2 bit1
+		      0    0    1
+		
+
+struct bit
+{
+    unsigned int a:3;
+    int b:3;
+};
+int main()
+{
+    struct bit b1;
+    b1.a=4; // 4
+    b1.b=1000;
+    printf("%d\n",b1.a);
+    printf("%d",b1.b);
+}
+
+
+
+ octal and hexa number from decimal number 
+
+
+
+
+
+
+
+
+
+	4 binary -> 0 1 0 0 
+	5 binary -> 0 1 0 1 
+	 
+
+	unsigned int a:3 
+
+	bit3 bit2 bit1 
+	 1    0    0 
+
+	   	
+	int b : 3 
+
+	(sign)
+	bit3 	bit2 	bit1    
+	 1	 0       1
+
+
+  	1 0 1
+
+	2s compliment 
+
+	0 1 0 ( 1 s )
+	    1
+	-----
+	0 1 1 ( 2s compliment )  		
+	 
+	2 + 1 = -3 	
+
+
+
+
+
+	 
+
+
+ 

@@ -1,0 +1,47 @@
+DAY 5 : Poll Questions
+
+Where can the default parameter be placed by the user?
+a) leftmost
+b) rightmost
+c) both leftmost & rightmost
+d) topmost
+
+Answer: B
+
+void disp(int a=100,int b=200,int c=300,int d=400);
+
+disp(); // 100,200,300,400
+disp(1); // 1 200 300 400
+disp(10,20); //10 20 300 400
+//disp(11,22,33); // 11 22 33 400
+disp(11,22,33,44); // 11 22 33 44
+
+disp(, , 12);  // not allowe
+
+void disp(int a,int b,int c,int d=200); // three arguments are compulsory
+
+
+
+How many types of constructors are there in C++?
+a) 1
+b) 2
+c) 3
+d) 4
+
+Answer :C
+
+What is syntax of defining a destructor of class A?
+a) A(){}
+b) ~A(){}
+c) A::A(){}
+d) ~A(){};
+
+Answer :B
+
+By default how the value are passed in c++?
+a) call by value
+b) call by reference
+c) call by pointer
+d) call by object
+
+Answer : A

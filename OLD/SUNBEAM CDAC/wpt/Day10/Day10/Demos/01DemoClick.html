@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <input type="button" value="Click Me" onclick="F1()" /> -->
+    <input type="button" id="btn" value="Click Me" />
+    <script>
+      var refToBtn = document.getElementById("btn");
+      refToBtn.addEventListener("click", F1);
+
+      function F1() {
+        alert("hi");
+      }
+    </script>
+  </body>
+</html>

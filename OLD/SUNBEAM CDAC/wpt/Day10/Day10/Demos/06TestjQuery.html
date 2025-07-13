@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <table border="1" style="width: 400px; text-align: center">
+        <tr id="1">
+          <td>1</td>
+          <td>ABCD</td>
+          <td>Pune</td>
+        </tr>
+        <tr id="2">
+          <td>2</td>
+          <td>XYZ</td>
+          <td>Mumbai</td>
+        </tr>
+        <tr id="3">
+          <td>1</td>
+          <td>ABCD</td>
+          <td>Pune</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ABCD</td>
+          <td>Pune</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ABCD</td>
+          <td>Pune</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ABCD</td>
+          <td>Pune</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ABCD</td>
+          <td>Pune</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ABCD</td>
+          <td>Pune</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ABCD</td>
+          <td>Pune</td>
+        </tr>
+      </table>
+    </center>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      $("tr").mouseover(function () {
+        $(this).css("background-color", "brown");
+      });
+
+      $("tr").mouseout(function () {
+        $(this).css("background-color", "white");
+      });
+
+      $("tr").click(function () {
+        debugger;
+        $(this).css("background-color", "green");
+        $(this).unbind("mouseover mouseout");
+      });
+    </script>
+  </body>
+</html>

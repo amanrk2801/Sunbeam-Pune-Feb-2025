@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title>Template</title>
+  </head>
+  <body>
+    <form action="somejavacodeonserver.jsp" method="post">
+      <table
+        border="1"
+        style="width: 100%; border-width: 2px; border-color: black"
+      >
+        <tr>
+          <td colspan="3">
+            <img src="logo.jpg" style="height: 100px; width: 100px" alt="" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <a href="home.html">HOME</a> | <a href="about.html">ABOUT US</a> |
+            <a href="contact.html">CONTACT US</a> |
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100px; vertical-align: top">
+            <br />
+            <a href="home.html">HOME</a>
+            <br /><br />
+            <a href="contact.html">CONTACT US</a>
+          </td>
+          <td style="vertical-align: top">
+            <center>
+              <h1>Contact Us</h1>
+              <hr />
+              <table>
+                <tr>
+                  <td>Name:</td>
+                  <td>
+                    <input type="text" name="UserName" required="required" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Password:</td>
+                  <td>
+                    <input
+                      type="password"
+                      name="UserPassword"
+                      required="required"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Address:</td>
+                  <td>
+                    <textarea required="required" name="UserAddress">
+                    </textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td>EMail:</td>
+                  <td>
+                    <input type="email" name="UserEMail" required="required" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Age:</td>
+                  <td>
+                    <input
+                      type="number"
+                      min="18"
+                      name="Age"
+                      max="60"
+                      required="required"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Gender:</td>
+                  <td>
+                    <input type="radio" name="gender" value="F" />Female
+                    <input type="radio" name="gender" value="M" />Male
+                    <input type="radio" name="gender" value="O" />Other
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" style="text-align: center">
+                    <!-- <button>
+                      <input type="text" />
+                    </button> -->
+                    <input type="submit" value="Send Query" name="btn" />
+
+                    <!-- <input type="button" onclick="MyCode()" value="Send Query" name="btn" /> -->
+                  </td>
+                </tr>
+              </table>
+            </center>
+          </td>
+          <td style="width: 100px; height: 300px; vertical-align: top">
+            <center>AD</center>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <center>
+              <h4>Developed by Sunbeam. 2024</h4>
+            </center>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

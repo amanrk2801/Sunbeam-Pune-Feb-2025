@@ -1,0 +1,56 @@
+1. #include<stdio.h>
+int main( void )
+{
+char num1='A';
+
+short int ch=101;
+
+double num2=10.24;
+
+int value =sizeof(num1)+sizeof(ch)+sizeof(num2);
+// value =   1 + 2 + 8 
+// value =  11 
+
+printf("value=%-8d", value);
+// value = 11 
+
+
+int Value =sizeof(1)+sizeof('A')+sizeof(1.2);
+//  Value =   4  + 4 + 8 
+//  Value = 16        
+
+
+Value+= sizeof(10.2F);
+// Value = Value + sizeof(10.2f);
+// Value = 16 + 4 
+// Value = 20 
+
+
+printf("Value=%-8d", Value);
+//Value = 20 
+
+printf("Result=%-8.2f",value + Value /8.0f);
+//                      11   +  20  / 8.0f
+//                      11   +  2.5
+//                      13.5 
+
+return 0;
+}
+
+
+2.
+#include<stdio.h>
+int main( void )
+{
+char ch = 65;
+ int x=9;
+printf("%d, %d,", sizeof(ch), sizeof('A'));
+//                      1    ,  4  
+
+printf("%d, %d,", sizeof(65), sizeof(++x)); // exp not evaluates here 
+//                      4    ,    4 
+
+printf("%d", x);
+//          9
+return 0;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Us</title>
+    <style>
+      .error {
+        color: red;
+        width: 200px;
+        /* height: 10px; */
+        /* border: 1px solid black; */
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <table style="width: 400px" border="1">
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>
+              <input type="text" id="txtName" />
+            </td>
+            <td>
+              <div id="divForNameRelatedErrorMessage" class="error"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>
+              <input type="text" id="txtAddress" />
+            </td>
+            <td>
+              <div id="divForAddressRelatedErrorMessage" class="error"></div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <center>
+                <input type="button" value="Click Me" onclick="DoSomething()" />
+              </center>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+
+    <script>
+      function DoSomething() {
+        IsNameEmpty();
+        IsAddressEmpty();
+      }
+
+      function IsNameEmpty() {
+        var refToTxtName = document.getElementById("txtName");
+        var refToDivForNameRelatedErrorMessage = document.getElementById(
+          "divForNameRelatedErrorMessage"
+        );
+
+        var dataInNameBox = refToTxtName.value;
+
+        if (dataInNameBox != "") {
+          refToDivForNameRelatedErrorMessage.innerText = "";
+          console.log("Hi " + dataInNameBox);
+        } else {
+          refToDivForNameRelatedErrorMessage.innerText = "Name is required";
+        }
+      }
+
+      function IsAddressEmpty() {
+        var refToTxtAddress = document.getElementById("txtAddress");
+        var refToDivForAddressRelatedErrorMessage = document.getElementById(
+          "divForAddressRelatedErrorMessage"
+        );
+
+        var dataInAddressBox = refToTxtAddress.value;
+
+        if (dataInAddressBox != "") {
+          refToDivForAddressRelatedErrorMessage.innerText = "";
+          console.log(dataInAddressBox);
+        } else {
+          refToDivForAddressRelatedErrorMessage.innerText =
+            "Address is required";
+        }
+      }
+    </script>
+  </body>
+</html>

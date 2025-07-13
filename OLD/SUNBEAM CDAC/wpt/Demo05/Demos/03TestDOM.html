@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Demo</title>
+  </head>
+  <body>
+    <input type="text" id="txtName" value="CDAC" />
+    <input type="button" value="Click Me" onclick="DoSomething()" />
+    <script>
+      function DoSomething() {
+        //debugger;
+        var refToTxtBox = document.getElementById("txtName");
+        // var dataInSideTextBox = refToTxtBox.value;
+        // console.log("Hi " + dataInSideTextBox);
+        refToTxtBox.value = "Pune";
+        refToTxtBox.style.backgroundColor = "yellow";
+      }
+    </script>
+  </body>
+</html>

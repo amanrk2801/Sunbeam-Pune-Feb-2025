@@ -1,0 +1,133 @@
+ 1840  ps
+ 1841  ps -A
+ 1842  ps -e
+ 1843  kill -9 7823
+ 1844  kill -l
+ 1845  ls
+ 1846  ps -e
+ 1847  pkill -kill chrome
+ 1848  pkill -kill gnome-calculato
+ 1849  jps
+ 1850  pkill -9 java
+ 1851  ps aux
+ 1852  man kill
+ 1853  man uniq
+ 1854  ls
+ 1855  tty
+ 1856  who
+ 1857  w
+ 1858  whoami
+ 1859  who am i
+ 1860  uname -a
+ 1861  tail -9 /home/nilesh/mar-24/dac/os/day01/classwork.txt 
+ 1862  tail /home/nilesh/mar-24/dac/os/day01/classwork.txt 
+ 1863  tail -n 9 /home/nilesh/mar-24/dac/os/day01/classwork.txt 
+ 1864  head -5 /home/nilesh/mar-24/dac/os/day01/classwork.txt 
+ 1865  tail -5 /home/nilesh/mar-24/dac/os/day01/classwork.txt 
+ 1866  lscpu
+ 1867  man touch
+ 1868  /home/nilesh/mar-24/dac/os/day02
+ 1869  cd /home/nilesh/mar-24/dac/os/day02
+ 1870  pwd
+ 1871  rm ~/.vimrc 
+ 1872  ls
+ 1873  vim file1.txt
+ 1874  ps -A
+ 1883  env
+ 1884  echo $SHELL
+ 1887  tty
+ 1888  cd /home/nilesh/mar-24/dac/os/day02
+ 1889  vim food.txt
+ 1890  grep "is" food.txt 
+ 1891  grep "^is" food.txt 
+ 1892  grep "is$" food.txt 
+ 1893  grep "^is$" food.txt 
+ 1894  vim big.txt
+ 1895  grep "b.g" big.txt 
+ 1896  grep "b[aiu]g" big.txt 
+ 1897  grep "b[^aiu]g" big.txt 
+ 1898  grep "b*g" big.txt 
+ 1899  grep "b\*g" big.txt 
+ 1900  fgrep "b*g" big.txt 
+ 1901  vim repeat.txt
+ 1902  grep "wo*w" repeat.txt 
+ 1903  grep "wo?w" repeat.txt 
+ 1904  grep "wo+w" repeat.txt 
+ 1905  egrep "wo?w" repeat.txt 
+ 1906  egrep "wo+w" repeat.txt 
+ 1907  egrep "wo{3}w" repeat.txt 
+ 1908  egrep "wo{5,}w" repeat.txt 
+ 1909  egrep "wo{,2}w" repeat.txt 
+ 1910  egrep "wo{2,5}w" repeat.txt 
+ 1911  vim select.txt
+ 1912  cat select.txt 
+ 1913  egrep "(mango|grape|orange)" select.txt 
+ 1914  egrep "(mango|grape|melon)" select.txt 
+ 1915  vim phones.txt
+ 1916  grep "[0-9]{10}" phones.txt 
+ 1917  egrep "[0-9]{10}" phones.txt 
+ 1918  egrep "^[0-9]{10}$" phones.txt 
+ 1919  egrep "^(0|\+91)[0-9]{10}$" phones.txt 
+ 1920  egrep "^(0|\+91)?[0-9]{10}$" phones.txt 
+ 1921  egrep "[0-9]{10}" phones.txt 
+ 1922  egrep "^[0-9]{10}$" phones.txt 
+ 1923  egrep "^(0|\+91)[0-9]{10}$" phones.txt 
+ 1924  egrep "^(0|\+91)?[0-9]{10}$" phones.txt 
+ 1925  egrep -c "^(0|\+91)?[0-9]{10}$" phones.txt 
+ 1926  grep -R "fork" /home/nilesh/mar-24/desd/eos/
+ 1927  vim num.txt
+ 1928  head -6 num.txt 
+ 1929  tail -4 num.txt 
+ 1930  tail -n +23 num.txt 
+ 1931  head -17 num.txt 
+ 1932  head -17 num.txt | tail -n +12
+ 1933  ls
+ 1934  cat file1.txt 
+ 1935  sort file1.txt 
+ 1936  sort file1.txt | uniq
+ 1937  cat file1.txt | sort | uniq
+ 1938  tr "a-z" "A-Z"
+ 1939  tr "a-zA-Z" "A-Za-z"
+ 1940  tr " " ","
+ 1941  tr -s " " ","
+ 1942  pkill tr
+ 1943  ls
+ 1944  ps
+ 1945  kill -9 26343
+ 1946  ls -l
+ 1947  ls -l | tr -s " " "$"
+ 1948  ls -l | tr -s " " "$" | cut -d "$" -f3,5,9
+ 1949  ls -l | tr -s " " "$" | cut -d "$" -f3,5,9 | tr "$" " "
+ 1950  ls -l | tr -s " " "$" | cut -d "$" -f3,5,9 | tr "$" " " | tail -n +2
+ 1951  vim demo01.sh
+ 1952  bash demo01.sh 
+ 1953  vim demo01.sh
+ 1954  ls *.sh
+ 1955  ls -l *.sh
+ 1956  chmod +x demo01.sh 
+ 1957  ls -l *.sh
+ 1958  ./demo01.sh 
+ 1959  vim demo01.sh
+ 1960  vim demo02.sh
+ 1961  bash demo02.sh 
+ 1962  vim demo02.sh
+ 1963  bash demo02.sh 
+ 1964  vim demo02.sh
+ 1965  bash demo02.sh 
+ 1966  vim demo02.sh
+ 1967  bash demo02.sh 
+ 1968  vim demo03.sh 
+ 1969  expr 22 + 7
+ 1970  expr 22 - 7
+ 1971  expr 22 / 7
+ 1972  expr 22 % 7
+ 1973  expr 22 * 7
+ 1974  expr 22 \* 7
+ 1975  vim demo03.sh 
+ 1976  bash demo03.sh 
+ 1977  vim demo03.sh 
+ 1978  bash demo03.sh 
+ 1979  vim demo03.sh 
+ 1980  vim demo01.sh
+ 1981  cd ..
+ 2001  history > /tmp/classwork.txt

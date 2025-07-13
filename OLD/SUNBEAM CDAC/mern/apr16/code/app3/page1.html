@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>My Website</h1>
+    <input type="text" id="firstName" placeholder="your name here" />
+    <button onclick="changeText()">change text</button>
+    <div id="d1">this is default text</div>
+    <div id="d2">this is default text</div>
+    <div id="d3">this is default text</div>
+    <div id="d4">this is default text</div>
+    <div id="d5">this is default text</div>
+
+    <div id="final-div1">this default text</div>
+    <div id="final-div2">this default text</div>
+    <div id="final-div3">this default text</div>
+    <div id="final-div4">this default text</div>
+    <div id="final-div5">this default text</div>
+    <div id="final-div6">this default text</div>
+    <div id="final-div7">this default text</div>
+  </body>
+
+  <script>
+    function changeText() {
+      const num = 200
+
+      const divFinal = document.getElementById('final-div')
+      divFinal.innerText = `${num}`
+
+      const inputFirstName = document.getElementById('firstName')
+      const firstName = inputFirstName.value
+
+      const div1 = document.getElementById('d1')
+      div1.innerText = `Welcome ${firstName}`
+
+      const div2 = document.getElementById('d2')
+      div2.innerText = `Welcome ${firstName}`
+
+      const div3 = document.getElementById('d3')
+      div3.innerText = `Welcome ${firstName}`
+
+      const div4 = document.getElementById('d4')
+      div4.innerText = `Welcome ${firstName}`
+
+      const div5 = document.getElementById('d5')
+      div5.innerText = `Welcome ${firstName}`
+    }
+  </script>
+</html>

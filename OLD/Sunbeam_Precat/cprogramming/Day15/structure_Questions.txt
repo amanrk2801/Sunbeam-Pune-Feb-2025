@@ -1,0 +1,92 @@
+
+----------------------------
+
+
+
+int main()
+{
+    struct book
+    {
+        int pages;
+        char name[10];
+    }a;
+    a.pages=10;
+    strcpy(a.name,"Cbasics");
+    printf("%s=%d", a.name,a.pages);
+    return 0;
+}
+
+A) empty string=10
+B) C=basics
+C) Cbasics=10
+D) Compiler error
+
+
+Answer : C
+
+
+
+
+int main()
+{
+    struct ship
+    {
+        int size;
+        char color[10];
+    }boat1, boat2;
+    boat1.size=10;
+    boat2 = boat1;
+    printf("boat2=%d",boat2.size);
+    return 0;
+}
+A) boat2=0
+B) boat2=-1
+C) boat2=10
+D) Compiler error
+
+Answer : C
+
+
+
+
+
+int main()
+{
+    struct ship
+    {
+        char color[10];
+    }boat1, boat2;
+    strcpy(boat1.color,"RED");
+    printf("%s ",boat1.color);
+    boat2 = boat1;
+    strcpy(boat2.color,"YELLOW");
+    printf("%s",boat1.color);
+    return 0;
+}
+A) RED RED
+B) RED YELLOW
+C) YELLOW YELLOW
+D) Compiler error
+
+Answer : A
+
+
+int main()
+{
+    struct tree
+    {
+        int h;
+    };
+    struct tree tree1;
+    tree1.h=10;
+    printf("Height=%d",tree1.h);
+    return 0;
+}
+A) Height=0
+B) Height=10
+C) Height=
+D) Compiler error
+
+Answer : B
+
+

@@ -1,0 +1,254 @@
+    9  sudo apt-get update
+   10  sudo apt-get install ca-certificates curl
+   11  sudo install -m 0755 -d /etc/apt/keyrings
+   12  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+   13  sudo chmod a+r /etc/apt/keyrings/docker.asc
+   14  # Add the repository to Apt sources:
+   15  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+   16    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   17  sudo apt-get update
+   18  sudo usemod -aG docker $USER
+   19  sudo usermod -aG docker $USER
+   20  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   21  docker
+   22  sudo usermod -aG docker $USER
+   23  sudo reboot
+   24  docker image ls
+   25  docker image pull hell-world
+   26  docker image pull hello-world
+   27  docker image ls
+   28  docker image inspect hello-world
+   29  docker image ls
+   30  docker image rm hello-world
+   31  docker image ls
+   32  docker image pull hello-world
+   33  docker image pull httpd
+   34  docker image pull node
+   35  ps -aux
+   36  docker container ls
+   37  docker container create hello-world
+   38  docker container ls
+   39  docker container ls -a
+   40  docker container start 06
+   41  docker container ls -a
+   42  docker container rm 0619
+   43  docker container ls -a
+   44  docker container run hello-world
+   45  docker container ls -a
+   46  docker container run hello-world
+   47  docker container ls -a
+   48  docker container run hello-world
+   49  docker container ls -a
+   50  docker container rm 8a f2 ec 1e
+   51  docker container ls -a
+   52  docker container run --name c1 hello-world
+   53  docker container ls -a
+   54  docker container rm c1
+   55  docker container run --name c1 hello-world
+   56  docker container ls -a
+   57  docker container rm c1
+   58  docker image ls
+   59  docker container run --name c1 httpd
+   60  docker container rm c1
+   61  docker container run --name c1 httpd
+   62  docker container rm c1
+   63  docker container ls -a
+   64  docker container run --name c1 -itd httpd
+   65  docker container ls
+   66  docker container ls
+   67  docker container stop c1
+   68  docker container ls
+   69  docker container rm c1
+   70  docker container rm --force c1
+   71  docker container run -itd --name c1 httpd
+   72  docker container ls
+   73  docker container stop c1
+   74  docker container ls
+   75  docker container ls -a
+   76  docker container start c1
+   77  docker container ls -a
+   78  docker container rm --force c1
+   79  docker container ls -a
+   80  docker image ls
+   81  docker image pull nginx
+   82  docker image ls
+   83  docker container run -itd --name nginx nginx
+   84  docker container ls
+   85  docker container stop nginx
+   86  docker container ls
+   87  docker container ls -a
+   88  docker container start nginx
+   89  docker container ls -a
+   90  docker container rm --force nginx
+   91  docker container ls -a
+   92  docker image rm hello-world
+   93  docker image ls
+   94  docker container run --name c1 hello-world
+   95  sudo -i
+   96  docker container ls
+   97  docker container ls -a
+   98  docker container start nginx
+   99  docker container rm v1
+  100  docker container rm c1
+  101  docker container run -itd --name httpd httpd
+  102  docker container ls
+  103  date
+  104  docker container exec httpd date
+  105  docker container exec httpd ls
+  106  docker container exec httpd mkdir test
+  107  docker container exec httpd ls
+  108  docker container exec -it httpd bash
+  109  docker image pull aline
+  110  docker image pull alpine
+  111  docker container ls
+  112  docker image ls
+  113  docker container run -itd --name alpine alpine
+  114  docker container ls
+  115  docker container exec -it alpine bash
+  116  docker container exec -it alpine sh
+  117  docker container exec -it httd bash
+  118  docker container exec -it httpd bash
+  119  docker image pull mysql
+  120  docker container ls
+  121  docker container exec -it httpd bash
+  122  docker container ls
+  123  docker container exec -it httpd bash
+  124  docker container run -itd --name nginx nginx
+  125  docker container exec -it nginx bash
+  126  docker container 
+  127  docker container exec -it alpine sh
+  128  clear
+  129  docker contaienr ls
+  130  docker container ls -a
+  131  docker container rm --force 12 d3 85
+  132  docker container rm --force 41 e6a4
+  133  docker container rm --force 41 e6 a4
+  134  docker container ls -a
+  135  docker image ls
+  136  docker container run -itd --name httpd httpd
+  137  docker container ls
+  138  docker container exec -it httpd bash
+  139  docker container rm --force httpd
+  140  docker container run -itd --name httpd -p 8000:80 httpd
+  141  docker container ls
+  142  curl http://localhost:8000
+  143  docker container ls
+  144  docker container exec -it httpd bash
+  145  docker container rm --force httpd
+  146  docker container ls
+  147  docker container ls -a
+  148  docker container run -itd --name httpd -p 8000:80 httpd
+  149  docker container rm --force httpd
+  150  clear
+  151  mkdir docker
+  152  cd docker/
+  153  mkdir app1
+  154  cd app1
+  155  code .
+  156  vim index.html
+  157  vim ~/.vimrc
+  158  vim index.html
+  159  nautilus .
+  160  clear
+  161  ls
+  162  lsd
+  163  ls
+  164  vim Dockerfile
+  165  ls
+  166  docker image ls
+  167  docker image build -t myimage .
+  168  docker image ls
+  169  docker container ls
+  170  docker container ls -a
+  171  docker container run -itd --name mycontainer -p 8000:80 myimage
+  172  docker image ls
+  173  docker container ls
+  174  docker container rm --force mycontainer
+  175  cd ..
+  176  mkdir app2
+  177  cd app2
+  178  vim index.html
+  179  ls
+  180  vim Dockerfile
+  181  docker image ls
+  182  docker image rm myimage
+  183  docker image build -t myapp2image .
+  184  docker image ls
+  185  vim Dockerfile 
+  186  docker container run -itd --name myapp2 -p 9000:80 myapp2image
+  187  vim index.html 
+  188  docker container rm --force myapp2
+  189  docker image rm myapp2image
+  190  docker image build -t myapp2image .
+  191  docker container run -itd --name myapp2 -p 9000:80 myapp2image
+  192  cd ~?
+  193  cd ~
+  194  cler
+  195  clear
+  196  docker image ls
+  197  docker container run -itd --name mysql mysql
+  198  docker container ls
+  199  docker container ls -a
+  200  docker container logs mysql
+  201  echo $USER
+  202  echo $SHELL
+  203  printenv 
+  204  docker container logs mysql
+  205  docker container run -itd --name mysql -e MYSQL_ROOT_PASSWORD=root mysql
+  206  docker container rm mysql
+  207  docker container run -itd --name mysql -e MYSQL_ROOT_PASSWORD=root mysql
+  208  docker container ls
+  209  docker container exec -it mysql bash
+  210  docker container ls
+  211  clear
+  212  docker container ls
+  213  docker container rm --force mysql
+  214  docker container run -itd --name mysql -e MYSQL_ROOT_PASSWORD=root mysql
+  215  docker container ls
+  216  docker container exec -it mysql bash
+  217  docker container --force mysql
+  218  docker container rm --force mysql
+  219  docker container run -itd --name mysql -e MYSQL_ROOT_PASSWORD=root mysql
+  220  docker container exec -it mysql bash
+  221  docker container rm --force mysql
+  222  docker volume ls
+  223  docker volume create mysql-volume
+  224  docker volume ls
+  225  docker container run -itd --name mysql -e MYSQL_ROOT_PASSWORD=root -v mysql-volume:/var/lib/mysql mysql
+  226  docker container ls
+  227  docker container exec -it mysql bash
+  228  docker container rm --force mysql
+  229  docker container run -itd --name mysql -e MYSQL_ROOT_PASSWORD=root -v mysql-volume:/var/lib/mysql mysql
+  230  docker container exec -it mysql bash
+  231  exit
+  232  docker container ls -a
+  233  hostname
+  234  curl http://localhost
+  235  exit
+  236  watch -n 1 docker container ls
+  237  clear
+  238  exit
+  239  docker info | grep Swarm
+  240  docker swarm init
+  241  docker info | grep Swarm
+  242  docker swarm leave --force
+  243  docker info | grep Swarm
+  244  docker swarm init
+  245  docker info | grep Swarm
+  246  docker service ls
+  247  docker service create --name service1 --replicas 1 httpd
+  248  docker service ls
+  249  docker container ls
+  250  docker container rm --force mysql
+  251  docker container rm --force myapp2
+  252  docker cotnainer rm --force f7
+  253  docker container rm --force f7
+  254  docker container rm --force b1
+  255  docker container rm --force a7
+  256  docker service scale service1=10
+  257  docker service scale service1=100
+  258  docker service scale service1=20
+  259  docker service scale service1=2
+  260  exit
+  261  history
+  262  history > /tmp/history.txt

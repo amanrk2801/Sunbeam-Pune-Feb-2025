@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      style="height: 500px; width: 500px; background-color: yellow"
+    >
+      Sorry! You need to upgrade your browser.
+    </canvas>
+    <script>
+      debugger;
+
+      var refToCanvas = document.getElementById("myCanvas");
+      var drawingContext = refToCanvas.getContext("2d");
+      drawingContext.moveTo(0, 0);
+      drawingContext.lineTo(100, 100);
+      drawingContext.stroke();
+    </script>
+  </body>
+</html>

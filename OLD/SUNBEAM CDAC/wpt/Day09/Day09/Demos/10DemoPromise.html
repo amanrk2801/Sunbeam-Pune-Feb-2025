@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <button onclick="GetData()">Get Data</button> <br />
+      <hr />
+      <div id="myData"></div>
+    </center>
+    <script src="external.js"></script>
+    <script>
+      function GetData() {
+        myfetch("GET", "https://reqres.in/api/users").then((data) => {
+          var refToMyDiv = document.getElementById("myData");
+          var result = JSON.parse(data);
+          for (var i = 0; i < result.data.length; i++) {
+            var h3 = `<h3>${result.data[i].first_name}</h3>`;
+            refToMyDiv.innerHTML = refToMyDiv.innerHTML + h3;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //-------------------------------
+      //---Function as a parameter
+      //-------------------------------
+
+      function DoCheck(a, b) {
+        debugger;
+        if (10 > 2) {
+          //imagine "somevalue" is calculated by DoCheck logic
+          a("somevalue");
+        } else {
+          b();
+        }
+      }
+
+      function OnSuccess1(somepara) {
+        console.log("somepara value" + somepara);
+        console.log("TRUE"); //Imagine 25 lines code here
+      }
+
+      function OnFailure1() {
+        console.log("FALSE"); //Imagine 25 lines code here
+      }
+
+      debugger;
+      DoCheck(OnSuccess1, OnFailure1);
+      console.log("abcd");
+    </script>
+  </body>
+</html>

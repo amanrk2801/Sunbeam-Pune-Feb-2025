@@ -1,0 +1,62 @@
+DAY5:POLL Questions
+
+Choose a correct statement about C Escape Sequences.
+A) \n produces new line.
+B) \t produces one tab space (white spaces)
+C) \b produces one Backspace
+D) All the above
+
+Answer :D
+
+Choose a correct statement about C Escape Sequences.
+
+A) \' outputs one Single Quote. 
+B) \" outputs one Double Quote.
+C) \\ produces one Visible Back Slash \.
+D) All the above
+
+Answer : D
+
+
+
+
+What is the output of C program.?
+int main()
+{
+    int a=123;
+    printf("*%06d*",a);
+    return 0;
+}
+
+
+
+
+A) *123*
+B) *6123*
+C) *000123*
+D) *006123*
+Answer: C
+
+
+
+What is the output of C program.?
+int main()
+	{
+    float a=654.123456f;
+    printf("%3.3f,%3.2f",a,a);
+	// - - - 
+    return 0;
+}
+
+A) 654,654
+B) 654.123456,654.123456
+C) 654.123,654.12
+D) 654.000,654.00
+
+Answer : C
+
+
+
+
+
+

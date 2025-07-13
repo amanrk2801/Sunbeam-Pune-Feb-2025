@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //-------------------------------
+      //---Function Returning Function
+      //-------------------------------
+
+      function GetMeSomeFunction() {
+        var sayHi = undefined;
+
+        sayHi = function () {
+          console.log("Hi!");
+        };
+
+        return sayHi;
+      }
+
+      debugger;
+      var f1 = GetMeSomeFunction();
+      f1();
+    </script>
+  </body>
+</html>

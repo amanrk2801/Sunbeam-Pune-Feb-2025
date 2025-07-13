@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      Lat: <input type="text" id="txtLat" /> Long :
+      <input type="text" id="txtLong" />
+      <button onclick="FindMe()">Find Me</button>
+      <hr />
+      <div id="myDiv"></div>
+    </center>
+    <hr />
+    <script>
+      var refToTxtLat = document.getElementById("txtLat");
+      var refToTxtLong = document.getElementById("txtLong");
+      var refToMyDiv = document.getElementById("myDiv");
+
+      function FindMe() {
+        navigator.geolocation.getCurrentPosition(
+          OnSuccessCallMe,
+          OnFailureCallMe
+        );
+      }
+
+      // getCurrentPosition internally;
+      // getCurrentPosition(f1, f2)
+      // {
+      //   //server call to get the position based on IP
+      //   //on success and receving position data
+      //   //call f1
+      //   //f1(positionDetails)
+      //   //else on failure
+      //   //call f2(error)
+      // }
+
+      function OnSuccessCallMe(result) {
+        refToMyDiv.innerHTML = "";
+        refToTxtLat.value = result.coords.latitude;
+        refToTxtLong.value = result.coords.longitude;
+        debugger;
+        var anchorTag = `<a target="_blank" href="http://latlong.net/c/?lat=${result.coords.latitude}&long=${result.coords.longitude}">See Map</a>`;
+
+        refToMyDiv.innerHTML = anchorTag;
+      }
+
+      function OnFailureCallMe(error) {
+        alert("Something went wrong!");
+        debugger;
+      }
+    </script>
+  </body>
+</html>

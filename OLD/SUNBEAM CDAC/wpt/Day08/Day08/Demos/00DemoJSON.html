@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <table border="1" style="width: 300px">
+        <tbody id="myTableBody"></tbody>
+      </table>
+    </center>
+    <script>
+      debugger;
+      var refTomyTableBody = document.getElementById("myTableBody");
+
+      var person = {
+        No: 1,
+        Name: "Sachin",
+        Address: "Pune",
+        Photo: "sachin.jpeg",
+      };
+      var row =
+        `<tr>
+        <td>` +
+        person.No +
+        `</td>
+                    <td>` +
+        person.Name +
+        `</td>
+                    <td>` +
+        person.Address +
+        `</td> <td>` +
+        `<img src="` +
+        person.Photo +
+        `" height="70px" width="70px"/> 
+        </td>
+                 </tr>`;
+
+      refTomyTableBody.innerHTML = row;
+    </script>
+  </body>
+</html>

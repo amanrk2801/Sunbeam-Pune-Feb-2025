@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    Name: <input type="text" id="txtName" /> <br />
+    Age : <input type="text" id="txtAge" /> <br />
+    <button onclick="DoStore()">Store In Session</button>
+    <hr />
+    <script>
+      function DoStore() {
+        debugger;
+
+        var refToTxtName = document.getElementById("txtName");
+        var refToTxtAge = document.getElementById("txtAge");
+
+        window.sessionStorage.setItem("myname", refToTxtName.value);
+        window.sessionStorage.setItem("myage", refToTxtAge.value);
+
+        window.location.href = "07DemoShowSessionStoreData.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .A {
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+        margin: 10px;
+      }
+
+      .B {
+        height: 150px;
+        width: 150px;
+        background-color: skyblue;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" id="btn" value="Click Me" />
+
+    <div id="div1" class="A" title="nagpur">1</div>
+    <div id="div2" class="B" title="kanpur">2</div>
+    <div id="div3" class="A" title="kolhapur">3</div>
+    <div id="div4" class="B" title="pune">4</div>
+    <section id="section1" class="A">section</section>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      $("#btn").click(function () {
+        //----------------------------------------
+        //Find by ID
+        //----------------------------------------
+        //$("#div1").css("background-color", "red");
+        //----------------------------------------
+        //CSS Function
+        //----------------------------------------
+        // $("#div1").css("background-color", "red");
+        // $("#div1").css("width", "500px");
+        //----------------------------------------
+        //CSS Function via Rule of Chaining
+        //----------------------------------------
+        // $("#div1").css("background-color", "red").css("width", "500px");
+        //----------------------------------------
+        //CSS Function using JSON
+        //----------------------------------------
+        // $("#div1").css({ "background-color": "red", width: "500px" });
+        //----------------------------------------
+        //Find by TagName
+        //----------------------------------------
+        //$("div").css("background-color", "red");
+        //----------------------------------------
+        //Find by ClassName
+        //----------------------------------------
+        // $(".A").css("background-color", "red");
+        //----------------------------------------
+        //Find by TagName & ClassName
+        //----------------------------------------
+        // $("div.A").css("background-color", "red");
+        //Find by Attribute Values
+        //----------------------------------------
+        // $("div[title='pune']").css("background-color", "red");
+        // $("div[title^='k']").css("background-color", "red");
+        // $("div[title$='r']").css("background-color", "red");
+        // $("div[title*='n']").css("background-color", "red");
+        //Find by Filter Function
+        //----------------------------------------
+
+        $("div[title*='n']")
+          .filter("div[title*='g']")
+          .css("background-color", "red");
+      });
+    </script>
+  </body>
+</html>

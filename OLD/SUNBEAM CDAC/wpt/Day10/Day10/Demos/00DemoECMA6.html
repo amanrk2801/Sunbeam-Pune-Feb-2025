@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //-----------------------------------------
+      //------------1. let & const
+      //-----------------------------------------
+
+      //   var counter = 100;
+
+      //   function KeepCounting() {
+      //     let counter = 88;
+      //     counter = counter + 100;
+      //     console.log(counter);
+      //   }
+
+      //   KeepCounting();
+      //   console.log(counter);
+
+      //   const sayHi = function () {
+      //     console.log("hi");
+      //   };
+
+      //   // sayHi = 100; //here we would get error
+      //   sayHi();
+
+      //-----------------------------------------
+      //------------2. Arrow Function
+      //-----------------------------------------
+
+      //   function SayHi(name) {
+      //     console.log("Hi " + name);
+      //   }
+
+      //   const SayHi = function (name) {
+      //     console.log("Hi " + name);
+      //   };
+
+      //   const SayHi = (name) => {
+      //     console.log("Hi " + name);
+      //   };
+
+      //   SayHi("CDAC");
+
+      //   function DoSomething(f1, f2) {
+      //     if (10 > 2) {
+      //       f1();
+      //     } else {
+      //       f2();
+      //     }
+      //   }
+      //   DoSomething(
+      //     () => {
+      //       console.log("TRUE");
+      //     },
+      //     () => {
+      //       console.log("FALSE");
+      //     }
+      //   );
+
+      //-----------------------------------------
+      //------------3. Spread Operator
+      //-----------------------------------------
+
+      //   var p1 = { no: 1, name: "mahesh", address: "pune" };
+
+      //var p2 = { ...p1 }; //copy entire p1 with key, value
+      //p2.name = "nilesh";
+      //   var p2 = { ...p1, name: "nilesh", no: 99 };
+
+      //   var p2 = { ...p1, name: "nilesh", no: 99, age: 18 };
+      //   console.log(p2);
+
+      //   console.log(p1);
+      //   delete p1.address; //Remove some member
+      //   p1.phone = 787878787; //add some member
+      //   console.log(p1);
+
+      //-----------------------------------------
+      //------------4. Template Literal
+      //-----------------------------------------
+
+      //   var name = "mahesh";
+      //   var address = "pune";
+
+      //   var message = `Hello ${name} from ${address}`;
+      //   console.log(message);
+
+      //-----------------------------------------
+      //------------5. Class Keyword
+      //-----------------------------------------
+
+      //   class Person {
+      //     constructor(no, name, address) {
+      //       this.No = no;
+      //       this.Address = address;
+      //       this.Name = name;
+      //     }
+      //     Print() {
+      //       console.log(this.No + this.Name + this.Address);
+      //     }
+      //   }
+
+      //   var p1 = new Person(1, "mahesh", "pune");
+      //   p1.Print();
+
+      //--------------------------------------------
+      //------------Spread Operator For Parameters
+      //--------------------------------------------
+
+      function SayHi(x) {
+        debugger;
+      }
+
+      var p1 = { no: 1, name: "mahesh", address: "pune" };
+
+      //   debugger;
+      //SayHi({ ...p1 });
+
+      //const { name, no } = { ...p1 };
+      //   var name = p1.name;
+      //   var no = p1.no;
+      console.log(name);
+      console.log(no);
+      debugger;
+    </script>
+  </body>
+</html>

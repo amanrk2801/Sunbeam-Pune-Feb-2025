@@ -1,0 +1,8 @@
+https://developer.mozilla.org/en-US/docs/Web/HTML/
+https://www.w3schools.com/
+https://javascript.info/
+https://getbootstrap.com/
+http://javascriptissexy.com/
+https://todomvc.com/
+Beginning Hybrid Mobile Application Development by Apress
+

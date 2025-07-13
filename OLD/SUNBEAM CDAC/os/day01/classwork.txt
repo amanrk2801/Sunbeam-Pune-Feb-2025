@@ -1,0 +1,163 @@
+ 1940  cd /home/nilesh/mar-24/dac/os/day01
+ 1941  gcc main.c 
+ 1942  ./a.out 
+ 1943  objdump -t a.out 
+ 1944  readelf -a a.out 
+ 1945  objdump -t a.out 
+ 1946  readelf -h a.out 
+ 1947  ls -l
+ 1948  stat main.c 
+ 1949  ls -l /dev
+ 1950  df -h
+ 1951  vim /etc/mysql/mysql.conf.d/mysqld.cnf 
+ 1952  netstat -tln
+ 1953  df -h
+ 1954  ls / 
+ 1955  ls /dev
+ 1956  ls /home
+ 1957  ls /bin
+ 1958  ls /root
+ 1959  ls /home
+ 1960  ls /home/desd/
+ 1961  echo $SHELL
+ 1962  echo $HOME
+ 1963  echo $USER
+ 1964  echo $LANG
+ 1965  env
+ 1966  echo $PATH
+ 1967  ls
+ 1968  which ls
+ 1969  a.out
+ 1970  which a.out
+ 1971  pwd
+ 1972  ls
+ 1973  export PATH=/home/nilesh/mar-24/dac/os/day01:$PATH
+ 1974  echo $PATH
+ 1975  a.out
+ 1976  java -version
+ 1977  javac -version
+ 1978  which javac
+ 1979  ./a.out 
+ 1980  a.out
+ 1981  ls -l /
+ 1982  ls
+ 1983  echo $PATH
+ 1984  /usr/bin/ls
+ 1985  ls /
+ 1986  ls /home
+ 1987  /usr/bin/ls
+ 1988  ls
+ 1989  echo $PATH
+ 1990  exit
+ 1991  env
+ 1992  a.out
+ 1993  exit
+ 1994  zoomit
+ 1995  exit
+ 1996  uxplay 
+ 1997  exit
+ 1998  init 0
+ 1999  cd /home/nilesh/mar-24/dac/os/day01
+ 2000  ls -l
+ 2001  ls -i
+ 2002  ls -l -i
+ 2003  man man 
+ 2004  man printf
+ 2005  man 3 printf
+ 2006  man strcpy
+ 2007  clear
+ 2008  man ls
+ 2009* ls  
+ 2010  man ls
+ 2011  ls -a
+ 2012  pwd
+ 2013  cd ..
+ 2014  pwd
+ 2015  ls -a
+ 2016  ls -A
+ 2017  man ls
+ 2018  ls -l
+ 2019  ls -l -h
+ 2020  man ls
+ 2021  ls -S
+ 2022  ls -l -S
+ 2023  ls -l -S -r
+ 2024  man ls
+ 2025  ls -R
+ 2026  mkdir /tmp/movies
+ 2027  cd /tmp
+ 2028  pwd
+ 2029  mkdir movies/hw
+ 2030  cd movies
+ 2031  mkdir bw
+ 2032  mkdir /tmp/songs/classic
+ 2033  rmdir /tmp/songs/classic/
+ 2034  mkdir /tmp/songs/classic/gazal
+ 2035  man mkdir
+ 2036  mkdir -p /tmp/songs/classic/gazal
+ 2037  ls -R /tmp/movies
+ 2038  ls -R /tmp/songs
+ 2039  tree /tmp/movies/
+ 2040  tree /tmp/songs/
+ 2041  pwd
+ 2042  cat > hw/inception.txt
+ 2043  cat hw/inception.txt 
+ 2044  cat /tmp/movies/hw/inception.txt 
+ 2045  cat >> hw/inception.txt 
+ 2046  cat hw/inception.txt 
+ 2047  cat -n hw/inception.txt 
+ 2048  tac hw/inception.txt 
+ 2049  rev hw/inception.txt 
+ 2050  pwd
+ 2051  cp hw/inception.txt bw
+ 2052  ls hw/
+ 2053  ls bw/
+ 2054  cat bw/inception.txt 
+ 2055  cd hw
+ 2056  cp inception.txt inception2.txt
+ 2057  ls
+ 2058  cat inception2.txt 
+ 2059  cp -R /tmp/movies /home/nilesh/mar-24/dac/os/day01
+ 2060  man mv
+ 2061  mv /home/nilesh/mar-24/dac/os/day01/a.out /tmp
+ 2062  ls /tmp/*.out
+ 2063  /tmp/a.out 
+ 2064  ls /tmp/songs
+ 2065  mv /tmp/songs/ /home/nilesh/mar-24/dac/os/day01
+ 2066  ls /tmp/songs
+ 2067  cd /home/nilesh/mar-24/dac/os/day01/movies/bw
+ 2068  ls
+ 2069  mv inception.txt incept.txt
+ 2070  ls
+ 2071  cat incept.txt 
+ 2072  ls
+ 2073  mv incept.txt .incept.txt
+ 2074  ls
+ 2075  ls -A
+ 2076  cat .incept.txt
+ 2077  mv .incept.txt incept.txt
+ 2078  ls
+ 2079  cd /home/nilesh/mar-24/dac/os/day01
+ 2080  rm movies/bw/incept.txt 
+ 2081  rmdir /home/nilesh/mar-24/dac/os/day01/movies
+ 2082  rm -R movies/
+ 2083  date
+ 2084  cal
+ 2085  ncal
+ 2086  ls -l *.c
+ 2087  touch main.c 
+ 2088  ls -l *.c
+ 2089  touch file1.txt file2.txt file3.txt
+ 2090  ls -l *.txt
+ 2091  factor 1234
+ 2092  factor 4321
+ 2093  factor 84
+ 2094  alias c=clear
+ 2095  c
+ 2096  alias rm=clear
+ 2097  rm
+ 2098  alias 
+ 2099  ualias rm
+ 2100  unalias rm
+ 2101  history 
+ 2102  history > classwork.txt

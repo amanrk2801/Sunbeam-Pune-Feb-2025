@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Demo Show Store Data Page</h1>
+
+    <div id="myDiv" style="background-color: yellow; width: 100%"></div>
+    <hr />
+    <button onclick="GoHome()">Go Back To Previous Page (Store Page)</button>
+    <script>
+      function GoHome() {
+        window.location.href = "06DemoSessionStore.html";
+      }
+      function GetStoreData() {
+        debugger;
+
+        var refToMyDiv = document.getElementById("myDiv");
+
+        refToMyDiv.innerHTML = "";
+        var name = window.sessionStorage.getItem("myname");
+        var age = window.sessionStorage.getItem("myage");
+
+        var h1Tag = `<h1>Welcome ${name}, ${age} </h1>`;
+        refToMyDiv.innerHTML = h1Tag;
+      }
+
+      GetStoreData();
+    </script>
+  </body>
+</html>

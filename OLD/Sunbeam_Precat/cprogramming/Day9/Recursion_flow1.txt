@@ -1,0 +1,119 @@
+		
+int main() 
+{
+    int num; 
+    int result; 
+
+    printf("Enter the number\n");
+    scanf("%d",&num);  // 5 
+
+    result = myfact( num  );  // 5 
+
+    printf("Result = %d", result); 
+
+    return 0; 
+}
+		
+
+
+	          5 			
+int myfact ( int num )
+{
+        int res; 
+        if(num==0) // terminating condtion 
+            return 1;
+        else
+        res = num * myfact( num - 1); 
+	       5  * myfact( 4 )
+	
+               5  *  24  		  	    
+
+    return res;  //120 
+
+
+}
+
+	          4 			
+int myfact ( int num )
+{
+        int res; 
+        if(num==0) // terminating condtion 
+            return 1;
+        else
+        res = num * myfact( num - 1); 
+	      4   * myfact( 3 ) 
+	
+	      4   *   6 	 	    
+
+    return res; 
+
+
+}
+
+
+	         3 			
+int myfact ( int num )
+{
+        int res; 
+        if(num==0) // terminating condtion 
+            return 1;
+        else
+        res = num * myfact( num - 1); 
+	      3   * myfact( 2 )  
+	      3   *   2 		    
+
+    return res; 
+
+
+}
+
+	         2 			
+int myfact ( int num )
+{
+        int res; 
+        if(num==0) // terminating condtion 
+            return 1;
+        else
+        res = num * myfact( num - 1); 
+	      2   * myfact( 1 ) 
+	      2   *  1 	 	    
+
+    return res; 
+
+
+}
+
+	         1 			
+int myfact ( int num )
+{
+        int res; 
+        if(num==0) // terminating condtion 
+            return 1;
+        else
+        res = num * myfact( num - 1); 
+	      1  * myfact( 0 ) 
+	      1  *   1   	 	    
+
+    return res; 
+
+
+}
+
+	         0 			
+int myfact ( int num )
+{
+        int res; 
+        if(num==0) // terminating condtion 
+            return 1;
+        else
+        res = num * myfact( num - 1); 
+	      1  * myfact( 0 )  	    
+
+    return res; 
+
+
+}
+
+
+
+	STACK --> LIF0 --> Last IN first Out 

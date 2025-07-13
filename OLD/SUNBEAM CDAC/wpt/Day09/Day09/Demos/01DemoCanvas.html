@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="Draw()">Click Me</button> <br />
+    <hr />
+    <canvas
+      id="myCanvas"
+      style="height: 500px; width: 1000px; background-color: yellow"
+    >
+      Sorry! You need to upgrade your browser.
+    </canvas>
+    <script>
+      var x, y, x1, y1;
+      x = 0;
+      y = 0;
+
+      //alert(Math.floor(Math.random() * 100));
+
+      function Draw() {
+        debugger;
+
+        var refToCanvas = document.getElementById("myCanvas");
+        var drawingContext = refToCanvas.getContext("2d");
+        drawingContext.moveTo(x, y);
+        x1 = x + 10;
+        y1 = Math.floor(Math.random() * 100);
+        drawingContext.lineTo(x1, y1);
+        drawingContext.stroke();
+        x = x1;
+        y = y1;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+DAY4 : Poll Questions
+
+Which is used to define the member of a class externally?
+a) :
+b) ::
+c) #
+d) !!$
+
+Answer : B
+
+
+Which of the following is a valid class declaration?
+a) class A { int x; };
+b) class B { }
+c) public class A { }
+d) object A { int x; };
+
+Answer : A
+
+The data members and functions of a class in C++ are by default ____________
+a) protected
+b) private
+c) public
+d) public & protected
+
+Answer : B
+
+
+
+An inline function is expanded during ______________
+a) compile-time
+b) run-time
+c) never expanded
+d) end of the program
+
+Answer : A
+

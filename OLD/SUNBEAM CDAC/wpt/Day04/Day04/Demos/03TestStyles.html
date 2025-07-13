@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <!-- internal style -->
+    <style>
+      .AStyle {
+        height: 100px;
+        width: 200px;
+        background-color: yellow;
+      }
+      .BStyle {
+        height: 100px;
+        width: 200px;
+        background-color: burlywood;
+        color: red;
+        font-weight: bolder;
+      }
+    </style>
+
+    <!-- below css referred is called as external file -->
+    <!-- <link rel="stylesheet" href="commonStyle2.css" /> -->
+    <link rel="stylesheet" href="commonStyle2.min.css" />
+  </head>
+  <body>
+    <center>
+      <h1>PAGE 4</h1>
+      <div
+        id="mydiv1"
+        class="AStyle BStyle CStyle"
+        style="background-color: cadetblue"
+      >
+        DIV 1 (Cadet Blue background is applied via inline style)
+      </div>
+    </center>
+  </body>
+</html>

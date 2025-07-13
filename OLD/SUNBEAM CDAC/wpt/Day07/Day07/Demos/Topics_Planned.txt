@@ -1,0 +1,22 @@
+Questions
+Functional Programming
+  - Function as return value & parameter
+ 
+Object Oriented Prog
+ - Literal Syntax, 
+ 	- Adding Members dynamically into object
+
+ - Constructor Function, 
+ - Class Keyword : Inheritance
+
+DataFormats & Object associated with - JSON vs XML
+ - XmlHttpRequest
+---------------------------------------------------------
+Monday: HTML 5 Tags 
+jQuery.js
+---------------------------------------------------------
+Tuesday: Bootstrap.css 
+---------------------------------------------------------
+Wednesday : Misc
+
+  

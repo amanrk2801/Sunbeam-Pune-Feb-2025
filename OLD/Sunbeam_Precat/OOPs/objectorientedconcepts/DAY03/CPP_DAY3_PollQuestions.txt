@@ -1,0 +1,56 @@
+What is the general syntax for accessing the namespace variable?
+a) namespace::variable
+b) namespace.variable
+c) namespace#variable
+d) namespace$variable
+
+Answer: A
+
+
+Which keyword is used to access the variable in the namespace?
+a) using
+b) dynamic
+c) const
+d) static
+
+Answer : A 
+
+
+  #include <iostream>
+    using namespace std;
+    namespace Box1
+    { int a = 4;}
+    namespace Box2
+    {
+        int a = 13;
+    }
+    int main ()
+    {
+        int a = 16;
+        Box1::a;
+        Box2::a;
+        cout << a;
+        return 0;
+    }
+
+A.4
+B.13
+C.16
+D.Error
+
+Answer : C
+
+Which of the following is a properly defined structure?
+a) struct {int a;}
+b) struct a_struct {int a;}
+c) struct a_struct int a;
+d) struct a_struct {int a;};
+
+Answer : D
+
+
+
+
+
+
+

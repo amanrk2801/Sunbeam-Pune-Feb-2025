@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <table>
+        <tbody>
+          <tr>
+            <td>X:</td>
+            <td>
+              <input type="text" id="txtX" />
+            </td>
+            <td>
+              <div id="errorMessageX" style="color: red"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Y:</td>
+            <td>
+              <input type="text" id="txtY" />
+            </td>
+            <td>
+              <div id="errorMessageY" style="color: red"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Result:</td>
+            <td colspan="2">
+              <div id="resultDiv"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="3">
+              <input type="button" value="Addition" onclick="Add()" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+
+    <script>
+      function Add() {
+        var refTOtxtX = document.getElementById("txtX");
+        var refTOtxtY = document.getElementById("txtY");
+        var refToresultDiv = document.getElementById("resultDiv");
+
+        var isXNumber = false;
+        var isYNumber = false;
+
+        var isXBoxEmpty = IsEmpty("txtX", "errorMessageX", "X is required");
+        if (isXBoxEmpty == false) {
+          isXNumber = IsItNumber("txtX", "errorMessageX", "X should be number");
+        }
+
+        var isYBoxEmpty = IsEmpty("txtY", "errorMessageY", "Y is required");
+        if (isYBoxEmpty == false) {
+          isYNumber = IsItNumber("txtY", "errorMessageY", "Y should be number");
+        }
+
+        if (isXNumber == true && isYNumber == true) {
+          //alert("Do addition now!");
+
+          var xData = parseInt(refTOtxtX.value);
+          var yData = parseInt(refTOtxtY.value);
+
+          var result = xData + yData;
+          refToresultDiv.innerText = result;
+        } else {
+          refToresultDiv.innerText = "";
+        }
+      }
+
+      function IsItNumber(controlid, divid, errorMessage) {
+        var refToControl = document.getElementById(controlid);
+        var refToErrorControl = document.getElementById(divid);
+
+        var IsItNumber = false;
+
+        var isXValueText = isNaN(refToControl.value);
+        if (isXValueText == true) {
+          refToErrorControl.innerText = errorMessage;
+          IsItNumber = false;
+        } else {
+          refToErrorControl.innerText = "";
+          console.log(refToControl.value);
+          IsItNumber = true;
+        }
+
+        return IsItNumber;
+      }
+
+      function IsEmpty(controlid, errorcontrolid, errorMessage) {
+        var refToTxtBox = document.getElementById(controlid);
+        var refToDivForErrorMessage = document.getElementById(errorcontrolid);
+
+        var dataInTxtBox = refToTxtBox.value;
+
+        var isBoxEmpty = true;
+
+        if (dataInTxtBox != "") {
+          refToDivForErrorMessage.innerText = "";
+          console.log(dataInTxtBox);
+          isBoxEmpty = false;
+        } else {
+          refToDivForErrorMessage.innerText = errorMessage;
+          isBoxEmpty = true;
+        }
+
+        return isBoxEmpty;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      Search: <input type="text" id="txtBook" />
+      <button onclick="Search()">Search Books</button>
+      <hr />
+      <table border="1" style="width: 400px">
+        <tbody id="booktableBody"></tbody>
+      </table>
+    </center>
+    <script>
+      function Search() {
+        debugger;
+        var refTOtxtBook = document.getElementById("txtBook");
+        var bookDetailsToSearch = refTOtxtBook.value;
+
+        var helper = new XMLHttpRequest();
+        helper.onreadystatechange = function () {
+          if (helper.readyState == 4 && helper.status == 200) {
+            debugger;
+            var receivedData = JSON.parse(helper.responseText);
+            var refToTableBody = document.getElementById("booktableBody");
+
+            refToTableBody.innerHTML = "";
+
+            if (receivedData.items.length > 0) {
+              for (var i = 0; i < receivedData.items.length; i++) {
+                var bookRow = `<tr>
+                                <td>${receivedData.items[i].volumeInfo.title}</td>
+                                <td>${receivedData.items[i].volumeInfo.authors}</td>
+                                <td>
+                                <img src="${receivedData.items[i].volumeInfo.imageLinks.smallThumbnail}" width="100px" height="100px" />
+                                </td>
+                            </tr>`;
+                refToTableBody.innerHTML = refToTableBody.innerHTML + bookRow;
+              }
+            } else {
+              alert("No Records Found!");
+            }
+          }
+        };
+        helper.open(
+          "GET",
+          "https://www.googleapis.com/books/v1/volumes?q=" + bookDetailsToSearch
+        );
+        helper.send();
+      }
+    </script>
+  </body>
+</html>

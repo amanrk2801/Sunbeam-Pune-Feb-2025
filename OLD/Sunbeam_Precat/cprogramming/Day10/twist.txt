@@ -1,0 +1,98 @@
+#include <stdio.h>
+
+int testDemo(int, int);
+
+int main(void)
+{
+
+int you = 64, me = 32;
+
+int we = testDemo(you, me);
+
+printf("%d %d %d\n", me, you, we); //   32  64    64
+
+return 0;
+}
+
+// me=64 you=32
+int testDemo(int me, int you)
+{
+me = me + you; // 64 + 32  --> 96 
+return me - you; // 96 - 32 -->64
+
+you = you - me;
+return me + you;
+}
+*******************************************************************
+
+
+						int val
+						   3
+						   2 
+						   1 
+						   0 
+					           -1 	 
+				
+#include <stdio.h>
+int main(void)
+{
+static int val = 3;
+    3 	
+if(val--) 
+main();
+printf("%d ", val); -1
+return 0;
+}
+
+
+#include <stdio.h>
+     2 	
+int main(void)
+{
+static int val = 3;
+    2 
+if(val--) 
+main();
+printf("%d ", val); -1
+return 0;
+}
+
+#include <stdio.h>
+     1 	
+int main(void)
+{
+
+static int val = 3;
+    1
+if(val--) 
+main();
+printf("%d ", val); -1
+return 0;
+}
+
+
+#include <stdio.h>
+     0 	
+int main(void)
+{
+static int val = 3;
+    0 
+if(val--) 
+main();
+printf("%d ", val); -1
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

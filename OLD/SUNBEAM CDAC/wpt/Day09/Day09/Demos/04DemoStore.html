@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    Name: <input type="text" id="txtName" /> <br />
+    Age : <input type="text" id="txtAge" /> <br />
+    <button onclick="DoStore()">Store</button>
+    <hr />
+    <script>
+      function DoStore() {
+        debugger;
+
+        var refToTxtName = document.getElementById("txtName");
+        var refToTxtAge = document.getElementById("txtAge");
+
+        window.localStorage.setItem("myname", refToTxtName.value);
+        window.localStorage.setItem("myage", refToTxtAge.value);
+
+        window.location.href = "05DemoShowStoreData.html";
+      }
+    </script>
+  </body>
+</html>

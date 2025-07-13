@@ -1,0 +1,65 @@
+Q.1 
+What will be the output of following program ?
+#include <stdio.h>
+void main()
+{
+    char val=1;
+    if(val--==0) // post decrement -- consider old value ===> 1 == 0 - false   
+        printf("TRUE");
+    else
+        printf("FALSE");
+}
+A) FALSE
+B) Error
+C) TRUE
+D) None
+Answer: A
+
+Q.2
+What will be the output of following program ?
+#include <stdio.h>
+void main()
+{
+	int num = 24;
+	num % 2 == 0 ? goto end1 : goto end2;
+		// condition ? expression1 : expression2;
+		// expression1 & 2 --> MUST BE EXPRESSIONS -- NOT STATEMENT.
+			// EXPRESSION -- evaluate to some value.
+			// STATEMENT -- command/action -- goto, return;
+		// compiler error.
+end1:
+	printf("Even ");
+end2:
+	printf("Odd ");
+}
+A) Even
+B) Odd
+C) Even Odd
+D) None of these
+Answer: D
+
+Q.3
+What will be the output of following program ?
+#include <stdio.h>
+int main() {
+	int i, j;
+	for(i=1; i<=3; i+=2) {
+		for(j=1; j<=3; j=+2) // j=2 // j+=2 // j = j + 2 
+			printf("%d ", i + j);
+	}
+	return 0;
+}
+A) 2 4 4 6
+B) 2 3 3 3 ... (infinite loop) 
+C) Compiler error
+D) None of these
+Answer: B
+
+Q.4
+Which of the following is exit controlled loop?
+A) for
+B) while
+C) do-while
+D) if-else
+Answer: C
+

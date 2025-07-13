@@ -1,0 +1,77 @@
+Q.1 
+int main() 
+{ 
+    int x = 2, y = 5; 
+    (x & y) ? printf("True ") : printf("False "); // False
+    (x && y) ? printf("True ") : printf("False "); // True
+    return 0; 
+}
+
+A) False True
+B) True False
+C) True True
+D) False False
+Answer: A
+
+2 -- 0000 0010
+5 -- 0000 0101
+---------------
+     0000 0000 --> 0 -- False condition
+
+2 && 5 ---> T && T ---> True condition
+
+Q.2
+#include <stdio.h>
+void main()
+{
+	int x = 0;
+	if (x == 0) // True
+		printf("hi"); // executed -- hi
+	else
+		printf("how are u"); // skipped
+		printf("hello"); // out-side if-else -- will be executed irrespective of condition is true/false
+}
+A) hi
+B) how are you
+C) hello
+D) hihello
+Answer: D
+
+What will be the output? (entered the value 1)
+void main()
+{
+	int ch;
+	printf("enter a value between 1 to 2: ");
+	scanf("%d", &ch); // ch = 1
+	switch (ch) {
+		case 1: printf("1");
+		default: printf(" 2\n"); // since break is missing, next case will also be executed.
+	}
+}
+A) 1
+B) 2
+C) 1 2
+D) Run time error
+Answer: C
+
+#include <stdio.h>
+void main()
+{
+    if(!printf("")) // ! 0 -- True 
+	    printf("Okkk"); // executed
+    else
+        printf("Hiii");
+}
+A) Okkk
+B) Hiii
+C) Error
+D) None
+Answer: A
+
+// printf("") -- returns number of chars printed = 0.
+// ! 0 --> 1 (True condition)
+
+-----------------------------------------
+// if there is space in printf.
+printf("  ") --> return 2
+! printf(" ") --> 0 -- False condition
